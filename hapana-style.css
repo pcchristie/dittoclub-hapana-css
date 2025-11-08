@@ -1,0 +1,33 @@
+/* =========================================
+   Hapana Widget - Test: Make All Buttons Red
+   ========================================= */
+
+/* Common Button Types */
+.Mui-button-OFS-button,
+.Mui-button-OFS-containedPrimary,
+.Mui-button-OFS-containedSecondary,
+.Mui-button-OFS-outlinedPrimary,
+.Mui-button-OFS-outlinedSecondary,
+.Mui-button-OFS-textPrimary,
+.Mui-button-OFS-textSecondary,
+.Mui-button-OFS-outlinedGray,
+.Mui-classesWidget-OFS-classList2 button {
+    background-color: #ff0000 !important; /* Red background */
+    color: #ffffff !important;           /* White text */
+    border: 1px solid #ff0000 !important; /* Red border */
+    border-radius: 0 !important;         /* Square corners */
+}
+
+/* Hover effect */
+.Mui-button-OFS-button:hover,
+.Mui-button-OFS-containedPrimary:hover,
+.Mui-button-OFS-containedSecondary:hover,
+.Mui-button-OFS-outlinedPrimary:hover,
+.Mui-button-OFS-outlinedSecondary:hover,
+.Mui-button-OFS-textPrimary:hover,
+.Mui-button-OFS-textSecondary:hover,
+.Mui-button-OFS-outlinedGray:hover,
+.Mui-classesWidget-OFS-classList2 button:hover {
+    background-color: #cc0000 !important; /* Darker red on hover */
+    border-color: #cc0000 !important;
+}
