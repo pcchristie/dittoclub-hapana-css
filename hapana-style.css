@@ -29,14 +29,19 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
-/* Paper root background - common MUI component, use with OFS classes */
-.MuiPaper-root {
+/* Classes Widget - Parent container holding all class rows */
+.Mui-classesWidget-OFS-p0 {
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
-/* Classes Widget classList2 - documented selector */
-.Mui-classesWidget-OFS-classList2 {
+/* Paper root background - only within class list rows (not top row) */
+.Mui-classesWidget-OFS-p0 .MuiPaper-root {
     background-color: #F9F8F2 !important; /* Off-White */
+}
+
+/* Day headings - pure white background */
+.Mui-classesWidget-OFS-listHead {
+    background-color: #FFFFFF !important; /* Pure white */
 }
 
 /* Typography - Instrument Serif for headings (except H3/H4) */
