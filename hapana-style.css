@@ -4,6 +4,13 @@
 
 /* Font Face Declarations */
 @font-face {
+    font-family: 'ACUMIN';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c45eb0925205c1ca77/1759465928300/AcuminVariableConcept.otf');
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+}
+
+@font-face {
     font-family: 'INSTRUMENTSERIF';
     src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c9e222354b5b916bfc/1759465929940/InstrumentSerif-Regular.ttf');
 }
@@ -18,15 +25,32 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
-/* Typography - Instrument Serif */
+.Mui-noData-OFS-noDataContainer {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
+/* Typography - Instrument Serif for headings (except H3/H4) */
 .MuiTypography-root,
 .MuiTypography-body1,
 .MuiTypography-body2,
 .MuiTypography-h1,
-.MuiTypography-h2,
+.MuiTypography-h2 {
+    font-family: 'INSTRUMENTSERIF', serif !important;
+}
+
+/* H3 and Paragraph - Acumin (Body Text) */
 .MuiTypography-h3,
+.MuiTypography-body1,
+.MuiTypography-body2,
+p {
+    font-family: 'ACUMIN', sans-serif !important;
+    font-stretch: 100% !important;
+}
+
+/* H4 - Instrument Serif, forced to 18px */
 .MuiTypography-h4 {
     font-family: 'INSTRUMENTSERIF', serif !important;
+    font-size: 18px !important;
 }
 
 /* Buttons - Cobalt Background */
@@ -57,4 +81,45 @@
 .Mui-classesWidget-OFS-classList2 button:hover {
     background-color: #171C8F !important; /* Keep Cobalt on hover */
     border-color: #171C8F !important;
+}
+
+/* Calendar Picker Button - White text */
+/* Target any input or button inside a Cobalt background button */
+.Mui-button-OFS-button input,
+.Mui-button-OFS-button button,
+.Mui-button-OFS-containedPrimary input,
+.Mui-button-OFS-containedPrimary button,
+input[type="date"],
+input[type="text"][class*="date"],
+.MuiInputBase-root input,
+.MuiInputBase-input,
+button[class*="Mui-button-OFS"] input,
+button[class*="Mui-button-OFS"] button {
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Ensure all text inside Cobalt buttons is white */
+.Mui-button-OFS-button,
+.Mui-button-OFS-containedPrimary,
+.Mui-button-OFS-containedSecondary,
+.Mui-button-OFS-outlinedPrimary,
+.Mui-button-OFS-outlinedSecondary,
+.Mui-button-OFS-textPrimary,
+.Mui-button-OFS-textSecondary,
+.Mui-button-OFS-outlinedGray,
+.Mui-classesWidget-OFS-classList2 button {
+    color: #F9F8F2 !important; /* Off-White text - ensure all text is white */
+}
+
+.Mui-button-OFS-button *,
+.Mui-button-OFS-containedPrimary * {
+    color: #F9F8F2 !important; /* Off-White text for all child elements */
+}
+
+/* Calendar Picker - Make textGray64 span white inside Cobalt buttons */
+/* PCC note this is trying to select the calendar picker button text. Delete if not working.  */
+.Mui-button-OFS-button .Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-containedPrimary .Mui-classListHeader-OFS-textGray64,
+.Mui-classesWidget-OFS-classList2 button .Mui-classListHeader-OFS-textGray64 {
+    color: #F9F8F2 !important; /* Off-White text */
 }
