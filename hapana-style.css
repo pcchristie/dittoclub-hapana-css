@@ -29,6 +29,16 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
+/* Paper root background - common MUI component, use with OFS classes */
+.MuiPaper-root {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
+/* Classes Widget classList2 - documented selector */
+.Mui-classesWidget-OFS-classList2 {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
 /* Typography - Instrument Serif for headings (except H3/H4) */
 .MuiTypography-root,
 .MuiTypography-body1,
@@ -47,7 +57,32 @@ p {
     font-stretch: 100% !important;
 }
 
-/* H4 - Instrument Serif, forced to 18px */
+/* H4 - Specific styling for different areas */
+/* Class List Day Heading - Instrument Serif, 18px */
+.Mui-classesWidget-OFS-h4 {
+    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-size: 18px !important;
+}
+
+/* Class List Time (h4 inside classList2) - 16px, unbold */
+.Mui-classesWidget-OFS-classList2 h4 {
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+/* "X SPOTS LEFT" - Second to last h4, Cobalt and Acumin */
+.Mui-classesWidget-OFS-classList2 h4:nth-last-of-type(2) {
+    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    color: #171C8F !important; /* Cobalt color */
+    font-stretch: 100% !important;
+}
+
+/* Class Session Details Modal H4 - keep default or customize */
+.Mui-classSessionDetailsModal-OFS-h4 {
+    /* Add specific styling here if needed */
+}
+
+/* Generic H4 fallback - Instrument Serif, 18px */
 .MuiTypography-h4 {
     font-family: 'INSTRUMENTSERIF', serif !important;
     font-size: 18px !important;
@@ -117,9 +152,16 @@ button[class*="Mui-button-OFS"] button {
 }
 
 /* Calendar Picker - Make textGray64 span white inside Cobalt buttons */
-/* PCC note this is trying to select the calendar picker button text. Delete if not working.  */
+/* Using the documented OFS class pattern - target through parent button */
 .Mui-button-OFS-button .Mui-classListHeader-OFS-textGray64,
 .Mui-button-OFS-containedPrimary .Mui-classListHeader-OFS-textGray64,
 .Mui-classesWidget-OFS-classList2 button .Mui-classListHeader-OFS-textGray64 {
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Also target the Typography classes when inside buttons (using parent selector approach from docs) */
+.Mui-button-OFS-button .MuiTypography-root.Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-containedPrimary .MuiTypography-root.Mui-classListHeader-OFS-textGray64,
+.Mui-classesWidget-OFS-classList2 button .MuiTypography-root.Mui-classListHeader-OFS-textGray64 {
     color: #F9F8F2 !important; /* Off-White text */
 }
