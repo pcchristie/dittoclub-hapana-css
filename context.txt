@@ -1,0 +1,10 @@
+This repo contains 3 files:
+1. This context document
+2. hapana-style.css which is a stylesheet for a website
+3. Documentation from Hapana's website.
+
+Hapana is a Studio Management Software which provides an embed widget which I have embedded into my Squarespace website to allow clients to purchase & book classes on our studio website. 
+
+The default embed is styled using Hapana's styling which does not match the rest of my site. 
+
+hapana-style.css is hosted on a Github repo which both my Hapana back-end and my Squarespace site link to. I am modifying it to ensure the embed matches the rest of my site.

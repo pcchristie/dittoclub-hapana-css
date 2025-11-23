@@ -1,0 +1,387 @@
+Use Case
+“As a business user, I want customize the look and feel of the Embed Widgets to match my brand and website design.”
+
+You can now create custom cascading style sheets (CSS) to modify the look and feel of the embed widgets.  For example, you can update the fonts, button style, colors, background colors, etc.
+
+ 
+
+Directions for Use
+Create a custom CSS modifying the common style elements in the widgets, as well as some of the widget specific styles by following the How to Create Custom CSS Guide.
+Upload your custom CSS so that it is publicly available on your website and note the URL to access this style sheet.
+Only secured Custom CSS url (with https://xxxx) will be applicable here.
+Please share your new custom CSS URL with our Support team or your Account Manager so that we may enter this in your profile in our Admin systems. 
+ 
+How to Create Custom CSS
+The customizable elements in the widgets have the following pattern:
+
+Mui-<name>-OFS-<secondName>
+
+Create a CSS file with each of the elements you would like to modify.
+
+For example, to modify the border of the cards in the Package Widget:
+
+.Mui-packageCard-OFS-card {
+border: 1px solid red;
+}
+Results in:
+
+
+
+
+
+
+
+As another example, here is how to modify the Login button on a widget:
+
+.Mui-loginModal-OFS-dialogActions > div {
+  margin: 8px auto;
+  padding: 4px;
+  border: 1px solid dodgerblue;
+}
+Results in:
+
+
+
+ 
+
+Example CSS
+Here are two example of simple CSS files for your reference.
+
+Example Customizing Primary and Secondary Button
+/* Common Button Types contained and outlined */
+.Mui-button-OFS-button {
+border-radius: 0;
+}
+
+.Mui-button-OFS-containedPrimary,
+.Mui-button-OFS-containedSecondary {
+border-radius: 0;
+color: white;
+border: 1px solid orange;
+background-color: saddlebrown;
+}
+
+.Mui-button-OFS-containedPrimary:hover,
+.Mui-button-OFS-containedSecondary:hover {
+color: saddlebrown;
+border: 1px solid transparent;
+background-color: salmon;
+}
+
+.Mui-button-OFS-outlinedPrimary,
+.Mui-button-OFS-outlinedSecondary {
+border-radius: 0;
+border: 2px solid saddlebrown;
+background-color: white;
+}
+Image below shows the default style and the resulting custom style
+
+
+
+
+
+Example Customizing Title Colors and Font for Classes Widget
+Image below shows the default style and the resulting custom style
+
+/* Common Typography */
+.MuiTypography-body1 {
+font-family: MuseoSans-300, sans-serif;
+}
+
+/* Classes Widget */
+
+/* Class list day heading */
+.Mui-classesWidget-OFS-h4 {
+color: #000;
+font-size: 16px;
+}
+/* Class list elements (time/sessionName/button) */
+.Mui-classesWidget-OFS-classList2 h4 {
+font-size: 14px;
+}
+.Mui-classesWidget-OFS-classList2 h3 {
+font-size: 14px;
+color: #3fffc0;
+}
+.Mui-classesWidget-OFS-classList2 button {
+border-radius: 0;
+}
+
+/* Class details elements (className) */
+.Mui-classSessionDetailsModal-OFS-h1 {
+font-size: 22px;
+}
+.Mui-classSessionDetailsModal-OFS-h4 {
+font-size: 18px;
+color: #3fffc0;
+}
+
+.Mui-classSessionDetailsModal-OFS-medium,
+.Mui-classSessionDetailsModal-OFS-mediumPara {
+font-size: 16px;
+}
+
+.Mui-classSessionDetailsModal-OFS-readMore {
+color: #afaff0;
+}
+
+
+
+
+ 
+CSS Elements
+This is a list of some of the elements that you are able to modify with custom CSS.  The common elements are utilized in one or more widgets and others are listed as widget specific elements.  If you wish to modify an element that is not listed, please see the Advanced Custom CSS Section below to determine the element name.
+
+ 
+
+Common Elements
+CSS Selector
+
+Description
+
+.MuiTypography-root
+
+All typographies. Inspect if you want to select specific cases, you will see other classes replacing root with the variant (body1, body2, h4…).
+
+.MuiTypography-h4
+
+Typography with variant h4. Inspect to verify which variant it uses.
+
+.Mui-button-OFS-button
+
+Button style, regardless the variation they use
+
+.Mui-button-OFS-containedPrimary
+
+A specific style of button, contained with primary color
+
+.Mui-button-OFS-containedSecondary
+
+A specific style of button, contained with secondary color
+
+.Mui-button-OFS-outlinedPrimary
+
+A specific style of button, outlined with primary color
+
+.Mui-button-OFS-outlinedSecondary
+
+A specific style of button, outlined with secondary color
+
+.Mui-button-OFS-textPrimary
+
+A specific style of button. Only text, with primary color
+
+.Mui-button-OFS-textSecondary
+
+A specific style of button. Only text, with secondary color
+
+.Mui-button-OFS-outlinedGray
+
+A specific style of button. Outlined with gray color.
+
+.Mui-modalLayout-OFS-dialogContainer
+
+Common modal container
+
+ 
+
+Content Suite Widget Elements
+CSS Selector
+
+Description
+
+.Mui-contentTypesList-OFS-card
+
+Buttons to filter by content type
+
+.Mui-categoryCard-OFS-contentPreview
+
+Card of the contents
+
+.Mui-videoDetail-OFS-title
+
+Title of the video detail modal
+
+.Mui-filter-OFS-select
+
+Filter select buttons when filtering by content type.
+
+ 
+
+Package Widget Elements
+CSS Selector
+
+Description
+
+.Mui-packageCard-OFS-card
+
+Package card
+
+.Mui-packageCard-OFS-title
+
+Package title in the card
+
+.Mui-cardsList-OFS-title
+
+Card section title
+
+.Mui-packageDetails-OFS-standAlonePackageDetails
+
+Package details modal content
+
+.Mui-packageDetailModal-OFS-titleContainer
+
+Package detail modal title
+
+ 
+
+ 
+
+Classes Widget Elements
+CSS Selector
+
+Description
+
+.Mui-classesWidget-OFS-h4
+
+ Class List Day Heading
+
+.Mui-classesWidget-OFS-classList2 h4
+
+Class List Time
+
+.Mui-classesWidget-OFS-classList2 h3
+
+Class List Session Name
+
+.Mui-classesWidget-OFS-classList2 button
+
+Class List Button
+
+ 
+
+ 
+
+Privates Widget Elements
+CSS Selector
+
+Description
+
+.Mui-sessionTypesList-OFS-card
+
+Private session type list element
+
+.Mui-sessionTypesList-OFS-cardTitle
+
+Private session type list title
+
+.Mui-sessionsList-OFS-card
+
+Private booked sessions list item
+
+.Mui-sessionsList-OFS-currentDateSection
+
+Date divider section in private session booked list
+
+.Mui-sessionsList-OFS-containerHeader
+
+Private booked session list header
+
+ 
+
+Dashboard Widget Elements
+CSS Selector
+
+Description
+
+.Mui-menuDashboard-OFS-menu
+
+Left side menu
+
+.Mui-profileCard-OFS-container
+
+Left side profile card
+
+.Mui-statsDashboard-OFS-container
+
+Stats information
+
+.Mui-profileCard-OFS-userEmail
+
+user email inside the profile card
+
+.Mui-profileCard-OFS-userName
+
+user name inside the profile card
+
+ 
+
+Gift Card Widget Elements
+CSS Selector
+
+Description
+
+.Mui-formGiftCard-OFS-formSectionItem
+
+Step section
+
+.Mui-formGiftCard-OFS-giftCard
+
+Radio button option
+
+.Mui-formGiftCard-OFS-previewContainer
+
+Preview card
+
+.Mui-formGiftCard-OFS-previewPrice
+
+Price inside preview card
+
+ 
+
+ 
+
+Advanced Custom CSS
+The customizable elements in the widgets have the following pattern:
+
+ 
+
+Mui-<name>-OFS-<secondName>
+
+ 
+
+If the element or particular attribute you wish to modify is not provided in the general listing, you can identify the element using the following method.
+
+Inspect the running widget with DevTools (how to inspect elements)
+Select the desired part of the widget, as the picture below
+
+
+ 
+
+In the picture, Mui-packageCard-OFS-card is defined in the class of the div inspected. Note that class has multiple classes separated by space ( ).
+
+Looking the picture, you can see in Styles all the css properties assigned to each class.
+Create a CSS file using these class names with pattern Mui-<a>-OFS-<b>.
+Upload the CSS file to be accessible via URL.
+ 
+
+Important Note
+The classes with name jss<number> for example jss123, are generated dynamically for each release of the embed widgets, which makes them not reliable to give a custom style to your widget.
+
+ 
+
+Thus, you should not customize these classes directly. Instead, use the class of the parent element to override its children.
+
+
+
+ 
+
+In the above picture, in order to style the element <div class="MuiBox-root jss7"> , we should style its parent <div class="MuiDialogActions-root Mui-loginModal-OFS-dialogActions">.
+
+For Example:
+
+.Mui-loginModal-OFS-dialogActions > div {
+  margin: 8px auto;
+  padding: 4px;
+  border: 1px solid dodgerblue;
+}

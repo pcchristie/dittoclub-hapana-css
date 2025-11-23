@@ -1,8 +1,35 @@
 /* =========================================
-   Hapana Widget - Test: Make All Buttons Red
+   Hapana Widget - Ditto Club Brand Styling
    ========================================= */
 
-/* Common Button Types */
+/* Font Face Declarations */
+@font-face {
+    font-family: 'INSTRUMENTSERIF';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c9e222354b5b916bfc/1759465929940/InstrumentSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'INSTRUMENTITALIC';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c95a36b704e0fa5d02/1759465929939/InstrumentSerif-Italic.ttf');
+}
+
+/* Main Widget Background - Off-White */
+.Mui-modalLayout-OFS-dialogContainer {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
+/* Typography - Instrument Serif */
+.MuiTypography-root,
+.MuiTypography-body1,
+.MuiTypography-body2,
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4 {
+    font-family: 'INSTRUMENTSERIF', serif !important;
+}
+
+/* Buttons - Cobalt Background */
 .Mui-button-OFS-button,
 .Mui-button-OFS-containedPrimary,
 .Mui-button-OFS-containedSecondary,
@@ -12,13 +39,13 @@
 .Mui-button-OFS-textSecondary,
 .Mui-button-OFS-outlinedGray,
 .Mui-classesWidget-OFS-classList2 button {
-    background-color: #ff0000 !important; /* Red background */
-    color: #ffffff !important;           /* White text */
-    border: 1px solid #ff0000 !important; /* Red border */
+    background-color: #171C8F !important; /* Cobalt */
+    color: #F9F8F2 !important;           /* Off-White text */
+    border: 1px solid #171C8F !important; /* Cobalt border */
     border-radius: 0 !important;         /* Square corners */
 }
 
-/* Hover effect */
+/* Button Hover */
 .Mui-button-OFS-button:hover,
 .Mui-button-OFS-containedPrimary:hover,
 .Mui-button-OFS-containedSecondary:hover,
@@ -28,6 +55,6 @@
 .Mui-button-OFS-textSecondary:hover,
 .Mui-button-OFS-outlinedGray:hover,
 .Mui-classesWidget-OFS-classList2 button:hover {
-    background-color: #cc0000 !important; /* Darker red on hover */
-    border-color: #cc0000 !important;
+    background-color: #171C8F !important; /* Keep Cobalt on hover */
+    border-color: #171C8F !important;
 }

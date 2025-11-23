@@ -1,0 +1,112 @@
+Colours:
+    Cobalt 
+        C: 100 M: 98 Y: 9 K: 4
+        R: 23 G: 28 B: 143
+        Hex Code: #171C8F
+
+    Off-White
+        C: 1 M: 1 Y: 4 K: 0
+        R: 249 G: 248 B: 242
+        Hex Code: #F9F8F2
+
+    Spearmint
+        C: 27 M: 2 Y: 19 K: 0
+        R: 185 G: 220 B: 210
+        Hex Code: #B9DCD2
+
+    Asphalt
+        C: 78 M: 64 Y: 53 K: 43
+        R: 51 G: 63 B: 72
+        Hex Code: #333F48
+
+    Tan
+        C: 11 M: 10 Y: 29 K: 0
+        R: 226 G: 218 B: 186
+        Hex Code: #E2DABA
+
+    Black
+        C: 74 M: 67 Y: 66 K: 83
+        R: 15 G: 16 B: 16
+        Hex Code: #0F1010
+
+Typographic Suite:
+    Main Heading:
+        Acumin Condensed
+
+    Decorative/Alternative Heading
+        Instrument Serif
+        Instrument Serif Italic
+
+    Body Paragraph Style
+        Acumin Regular
+
+    Buttons (40px Spacing)
+        Acuming Bold
+
+Current Site CSS for context:
+**Note this may need to be re-declared in this CSS if Hapana can't read off the master stylesheet. I'm not sure.
+
+    @font-face {
+    font-family: 'ACUMIN';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c45eb0925205c1ca77/1759465928300/AcuminVariableConcept.otf');
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+    }
+
+    @font-face {
+    font-family: 'INSTRUMENTSERIF';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c9e222354b5b916bfc/1759465929940/InstrumentSerif-Regular.ttf');
+    }
+
+    @font-face {
+    font-family: 'INSTRUMENTITALIC';
+    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c95a36b704e0fa5d02/1759465929939/InstrumentSerif-Italic.ttf');
+    }
+
+    h1 {
+    font-family: 'ACUMIN';
+    text-transform: uppercase;
+    font-stretch: 80%;
+    font-weight: 750;
+    }
+
+    h2 {
+    font-family: 'INSTRUMENTSERIF';
+    text-transform: uppercase;
+    }
+
+    h3 {
+    font-family: 'INSTRUMENTITALIC';
+    text-transform: uppercase;
+    }
+
+    p {
+    font-family: 'ACUMIN';
+    font-stretch: 100%;
+    }
+
+    p.sqsrte-large { 
+    font-family: 'ACUMIN';
+    font-stretch: 100%;
+    }
+
+    p.sqsrte-small { 
+    font-family: 'ACUMIN';
+    font-stretch: 100%;  
+    }
+
+    //Background is Cobalt before loading
+    html, body {
+    background-color: #171C8F; /* your deep blue */
+    }
+
+    //Content is invisible until loaded
+    body {
+    opacity: 0;
+    transition: opacity 0.15s ease; /* fade-in duration */
+    }
+
+    //When loaded, make the content not invisible.
+    body.loaded {
+    opacity: 1;
+    }
