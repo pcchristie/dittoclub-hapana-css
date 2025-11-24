@@ -44,9 +44,15 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
-/* Day headings - pure white background */
+/* Main box header at top - Off-White background */
+.Mui-classListHeader-OFS-root,
+.Mui-classListHeader-OFS-paper {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
+/* Day headings - off-white background */
 .Mui-classesWidget-OFS-listHead {
-    background-color: #FFFFFF !important; /* Pure white */
+    background-color: #F9F8F2 !important; /* Off-White */
 }
 
 /* Day header text - uppercase and larger */
@@ -81,14 +87,16 @@ p {
     font-size: 18px !important;
 }
 
-/* Class List Time (h4 inside classList2) - 16px, unbold */
-.Mui-classesWidget-OFS-classList2 h4 {
-    font-size: 16px !important;
+/* Class List Time (h4 in first child of classList2) - 18px (16px + 2px), unbold, Instrument Serif */
+.Mui-classesWidget-OFS-classList2 > div:first-child h4 {
+    font-size: 18px !important; /* 16px + 2px */
     font-weight: normal !important;
+    font-family: 'INSTRUMENTSERIF', serif !important;
 }
 
-/* "X SPOTS LEFT" - Second to last h4, Cobalt and Acumin */
-.Mui-classesWidget-OFS-classList2 h4:nth-last-of-type(2) {
+/* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin */
+.Mui-classesWidget-OFS-block4 h4,
+.Mui-classesWidget-OFS-classList2 h4.status {
     font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
