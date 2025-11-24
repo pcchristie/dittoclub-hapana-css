@@ -1,4 +1,4 @@
-/* change 10 */
+/* change 11 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -91,7 +91,7 @@ p {
 
 /* Class List Time (h4 in first child of classList2) - 18px (16px + 2px), unbold, Instrument Serif */
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
-    font-size: 18px !important; /* 16px + 2px */
+    font-size: 16px !important; /* 16px + 2px */
     font-weight: normal !important;
     font-family: 'ACUMIN', sans-serif !important;
 }
@@ -232,4 +232,46 @@ button[class*="Mui-button-OFS"] button {
 .MuiPickersDateRangeDay-dayInsideRangeInterval,
 .MuiPickersDateRangeDay-rangeIntervalDayHighlight .MuiPickersDay-root.MuiPickersDateRangeDay-dayInsideRangeInterval {
     color: #171C8F !important; /* Cobalt text */
+}
+
+/* Calendar Date Picker - Background colors */
+/* Selected dates (start and end) - Spearmint background */
+.MuiPickersDay-root.Mui-selected {
+    background-color: #B9DCD2 !important; /* Spearmint */
+}
+
+/* In-between dates - Light spearmint background (exclude start/end containers) */
+.MuiPickersDateRangeDay-rangeIntervalDayHighlight:not(.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart):not(.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd) {
+    background-color: #dbefe9a6 !important; /* Light spearmint with transparency */
+}
+
+/* Login Modal Styling */
+/* Login and Sign Up titles - Acumin, uppercase, font-weight 750 */
+.Mui-loginModal-OFS-dialogContainer .Mui-loginModal-OFS-title,
+.Mui-loginModal-OFS-logIn .Mui-loginModal-OFS-title,
+.Mui-loginModal-OFS-signUp .Mui-loginModal-OFS-title,
+h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
+    font-family: 'ACUMIN', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 750 !important;
+    font-stretch: 100% !important;
+}
+
+/* Login Modal button labels - Acumin (like main embed buttons) */
+.Mui-loginModal-OFS-dialogActions .MuiButton-label,
+.Mui-loginModal-OFS-signUp .MuiButton-label,
+#button-loginModalLogin .MuiButton-label,
+#button-loginModalSignUp .MuiButton-label {
+    font-family: 'ACUMIN', sans-serif !important;
+    font-stretch: 100% !important;
+}
+
+/* Login Modal links - Acumin (Forgot password and Get help) */
+.Mui-loginModal-OFS-dialogContainer .Mui-loginModal-OFS-link,
+.Mui-loginModal-OFS-logIn .Mui-loginModal-OFS-link,
+.Mui-loginModal-OFS-dialogActions .Mui-loginModal-OFS-link,
+#loginModalForgotPassword,
+#loginModalHelp {
+    font-family: 'ACUMIN', sans-serif !important;
+    font-stretch: 100% !important;
 }

@@ -183,6 +183,59 @@ Note: The full HTML is very long. Key elements:
 - Month navigation arrows with .Mui-calendar-OFS-calendarArrowIcon
 - Cancel and Apply buttons at bottom
 
+Login/Signup Modal Structure:
+==============================
+Main container: .MuiPaper-root.MuiDialog-paper.Mui-loginModal-OFS-dialogContainer
+- Contains two sections side by side: Login and Sign Up
+- Opens when clicking the Login button in the header
+
+Structure:
+----------
+.Mui-loginModal-OFS-dialogContainer
+  ├── .Mui-loginModal-OFS-logIn (Login section - left side)
+  │   ├── .Mui-loginModal-OFS-dialogTitle
+  │   │   ├── h1.Mui-loginModal-OFS-title ("Log in")
+  │   │   └── p.Mui-loginModal-OFS-subtitle ("If you already have an account...")
+  │   ├── form
+  │   │   ├── .Mui-loginModal-OFS-dialogContent
+  │   │   │   ├── .Mui-formField-OFS-field.email
+  │   │   │   │   ├── label.Mui-formField-OFS-inputLabel (Email * with icon)
+  │   │   │   │   └── input#form-loginModalEmail
+  │   │   │   └── .Mui-formField-OFS-field.password
+  │   │   │       ├── label.Mui-formField-OFS-inputLabel (Password * with icon)
+  │   │   │       ├── input#form-loginModalPassword
+  │   │   │       └── button#formTogglePasswordVisibility (eye icon to show/hide password)
+  │   │   └── .Mui-loginModal-OFS-dialogActions
+  │   │       ├── button#button-loginModalLogin (Log in button)
+  │   │       ├── span#loginModalForgotPassword ("Forgot your password?")
+  │   │       ├── button#loginModalHelp ("Get help with signing in")
+  │   │       └── button#loginModalClose (Close X icon)
+  │   └── .Mui-loginModal-OFS-signUp (Sign Up section - right side)
+  │       ├── h1.Mui-loginModal-OFS-title ("Create an account")
+  │       ├── p.Mui-loginModal-OFS-subtitle ("New to Ditto Club? Please create...")
+  │       └── button#button-loginModalSignUp (Sign up button)
+
+Key Classes for CSS:
+--------------------
+  * .Mui-loginModal-OFS-dialogContainer - main modal container
+  * .Mui-loginModal-OFS-logIn - login section container
+  * .Mui-loginModal-OFS-signUp - sign up section container
+  * .Mui-loginModal-OFS-dialogTitle - title container
+  * .Mui-loginModal-OFS-title - main title (h1)
+  * .Mui-loginModal-OFS-subtitle - subtitle text (p)
+  * .Mui-loginModal-OFS-dialogContent - form content area
+  * .Mui-loginModal-OFS-dialogActions - action buttons area
+  * .Mui-formField-OFS-field - form field container
+  * .Mui-formField-OFS-inputLabel - input label
+  * .Mui-formField-OFS-icon - field icons (email, password)
+  * .Mui-loginModal-OFS-link - link text (forgot password, get help)
+  * .Mui-loginModal-OFS-closeButton - close button
+  * .Mui-loginModal-OFS-closeIcon - close icon SVG
+
+Login/Signup Modal HTML:
+------------------------
+<div class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper Mui-loginModal-OFS-dialogContainer MuiDialog-paperWidthSm MuiPaper-elevation24 MuiPaper-rounded" role="dialog"><div class="MuiGrid-root Mui-loginModal-OFS-logIn MuiGrid-container MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap"><div class="MuiDialogTitle-root Mui-loginModal-OFS-dialogTitle"><h1 class="MuiTypography-root Mui-loginModal-OFS-title MuiTypography-body1">Log in</h1><p class="MuiTypography-root Mui-loginModal-OFS-subtitle MuiTypography-body1">If you already have an account, login to continue booking.</p></div><form novalidate="" autocomplete="off"><div class="MuiDialogContent-root Mui-loginModal-OFS-dialogContent"><div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column"><div class="MuiFormControl-root MuiTextField-root Mui-formField-OFS-field email"><label class="MuiFormLabel-root MuiFormLabel-colorSecondary MuiInputLabel-root Mui-formField-OFS-inputLabel Mui-formField-OFS-inputLabelPlaceholder MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="form-loginModalEmail" id="form-loginModalEmail-label">Email<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiOutlinedInput-colorSecondary MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart"><div class="MuiInputAdornment-root MuiInputAdornment-positionStart"><span class="material-icons MuiIcon-root Mui-formField-OFS-resetIcon" aria-hidden="true"><svg class="MuiSvgIcon-root Mui-formField-OFS-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"></path></svg></span></div><input aria-invalid="false" id="form-loginModalEmail" name="email" required="" type="text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart" value=""><fieldset aria-hidden="true" class="jss16 MuiOutlinedInput-notchedOutline"><legend class="jss18"><span>Email&nbsp;*</span></legend></fieldset></div></div><div class="MuiFormControl-root MuiTextField-root Mui-formField-OFS-field password"><label class="MuiFormLabel-root MuiFormLabel-colorSecondary MuiInputLabel-root Mui-formField-OFS-inputLabel Mui-formField-OFS-inputLabelPlaceholder MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="form-loginModalPassword" id="form-loginModalPassword-label">Password<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorSecondary MuiOutlinedInput-colorSecondary Mui-formField-OFS-msReveal MuiInputBase-formControl MuiInputBase-adornedStart MuiOutlinedInput-adornedStart MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd"><div class="MuiInputAdornment-root MuiInputAdornment-positionStart"><span class="material-icons MuiIcon-root Mui-formField-OFS-resetIcon" aria-hidden="true"><svg class="MuiSvgIcon-root Mui-formField-OFS-icon" focusable="false" viewBox="0 0 14 16" aria-hidden="true"><use xlink:href="#ic-password_d4f7d2a49dd09bfe47ae128011c7ff1e"></use></svg></span></div><input aria-invalid="false" id="form-loginModalPassword" name="password" required="" type="password" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiOutlinedInput-inputAdornedStart MuiInputBase-inputAdornedEnd MuiOutlinedInput-inputAdornedEnd" value=""><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" id="formTogglePasswordVisibility"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 16 13" aria-hidden="true"><use xlink:href="#ic-eye_095ada08045024b71dae9a37510f4f10"></use></svg></span><span class="MuiTouchRipple-root"></span></button><fieldset aria-hidden="true" class="jss16 MuiOutlinedInput-notchedOutline"><legend class="jss18"><span>Password&nbsp;*</span></legend></fieldset></div></div></div></div><div class="MuiDialogActions-root Mui-loginModal-OFS-dialogActions"><div class="MuiBox-root jss20"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained Mui-button-OFS-button Mui-button-OFS-containedPrimary Mui-button-OFS-large MuiButton-containedPrimary" tabindex="0" type="submit" id="button-loginModalLogin"><span class="MuiButton-label">Log in</span></button></div><span class="MuiTypography-root Mui-loginModal-OFS-link MuiTypography-body1" id="loginModalForgotPassword">Forgot your password?</span><button class="MuiTypography-root MuiLink-root MuiLink-underlineHover Mui-loginModal-OFS-link Mui-loginModal-OFS-bold MuiLink-button MuiTypography-colorPrimary" id="loginModalHelp">Get help with signing in</button><button class="MuiButtonBase-root MuiIconButton-root Mui-loginModal-OFS-closeButton" tabindex="0" type="button" id="loginModalClose"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root Mui-loginModal-OFS-closeIcon MuiSvgIcon-fontSizeLarge" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></form></div><div class="MuiGrid-root Mui-loginModal-OFS-signUp MuiGrid-container MuiGrid-direction-xs-column MuiGrid-wrap-xs-nowrap"><h1 class="MuiTypography-root Mui-loginModal-OFS-title MuiTypography-body1">Create an account</h1><p class="MuiTypography-root Mui-loginModal-OFS-subtitle MuiTypography-body1">New to Ditto Club? Please create an account to continue.</p><div class="MuiBox-root jss21"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained Mui-button-OFS-button Mui-button-OFS-containedPrimary Mui-button-OFS-large MuiButton-containedPrimary" tabindex="0" type="button" id="button-loginModalSignUp"><span class="MuiButton-label">Sign up</span></button></div></div></div>
+
 Complete HTML Structure:
 =======================
 [Full HTML structure copied from browser console - see below]
