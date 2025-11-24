@@ -100,6 +100,89 @@ Notes:
 - Status text can be either in h4.status (spots left) or h4.error (closed)
 - All buttons use Mui-button-OFS-button class variants
 
+Calendar Dialog Structure:
+==========================
+Main container: .MuiPaper-root.MuiDialog-paper.Mui-calendar-OFS-dialogContainer
+- Contains date range picker with two calendars side by side
+- Has Cancel and Apply buttons at bottom (.Mui-calendar-OFS-dialogActions)
+
+Structure:
+----------
+.Mui-calendar-OFS-dialogContainer
+  └── .Mui-calendar-OFS-picker
+      └── .MuiPickersDesktopDateRangeCalendar-root
+          ├── .MuiPickersDesktopDateRangeCalendar-rangeCalendarContainer (First month - start date)
+          │   ├── Month header with navigation arrows
+          │   ├── Week day labels (S M T W T F S)
+          │   └── Calendar grid with date buttons
+          └── .MuiPickersDesktopDateRangeCalendar-rangeCalendarContainer (Second month - end date)
+              ├── Month header with navigation arrows
+              ├── Week day labels (S M T W T F S)
+              └── Calendar grid with date buttons
+
+Date Button States (for CSS targeting):
+----------------------------------------
+Each date is a button with class .MuiPickersDay-root inside .MuiPickersDateRangeDay-root
+
+1. START DATE (first selected date):
+   - Container: .MuiPickersDateRangeDay-root.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart
+   - Button: .MuiPickersDay-root.Mui-selected
+   - Preview wrapper: .MuiPickersDateRangeDay-rangeIntervalDayPreviewStart
+
+2. END DATE (last selected date):
+   - Container: .MuiPickersDateRangeDay-root.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd
+   - Button: .MuiPickersDay-root.Mui-selected
+   - Preview wrapper: .MuiPickersDateRangeDay-rangeIntervalDayPreviewEnd
+
+3. IN-BETWEEN DATES (dates between start and end):
+   - Container: .MuiPickersDateRangeDay-root.MuiPickersDateRangeDay-rangeIntervalDayHighlight
+   - Button: .MuiPickersDay-root.MuiPickersDateRangeDay-dayInsideRangeInterval
+   - Note: These show the range highlight background
+
+4. OUTSIDE RANGE (not selected, outside the date range):
+   - Button: .MuiPickersDay-root.MuiPickersDateRangeDay-dayOutsideRangeInterval
+   - May also have: .MuiPickersDateRangeDay-notSelectedDate
+
+5. TODAY (current date):
+   - Button: .MuiPickersDay-root.MuiPickersDay-today
+
+6. DISABLED DATES:
+   - Button: .MuiPickersDay-root with Mui-disabled class or disabled attribute
+
+7. NOT SELECTED (available dates not in range):
+   - Button: .MuiPickersDay-root.MuiPickersDateRangeDay-notSelectedDate
+
+Key Classes for CSS:
+--------------------
+  * .Mui-calendar-OFS-dialogContainer - main dialog container
+  * .Mui-calendar-OFS-picker - picker wrapper
+  * .Mui-calendar-OFS-calendarArrowIcon - arrow icons for month navigation
+  * .Mui-calendar-OFS-cancelButton - Cancel button
+  * .Mui-calendar-OFS-applyButton - Apply button
+  * .Mui-calendar-OFS-dialogActions - button container at bottom
+  * .MuiPickersDateRangeDay-rangeIntervalDayHighlightStart - start date container
+  * .MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd - end date container
+  * .MuiPickersDateRangeDay-rangeIntervalDayHighlight - in-between dates container
+  * .MuiPickersDay-root.Mui-selected - selected date buttons
+  * .MuiPickersDay-root.MuiPickersDateRangeDay-dayInsideRangeInterval - dates inside range
+  * .MuiPickersDay-root.MuiPickersDateRangeDay-dayOutsideRangeInterval - dates outside range
+
+Calendar Dialog HTML:
+---------------------
+<div class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper Mui-calendar-OFS-dialogContainer MuiDialog-paperWidthSm MuiPaper-elevation24 MuiPaper-rounded" role="dialog"><div class="MuiPickersStaticWrapper-root"><div class="Mui-calendar-OFS-picker"><div class="MuiPickersDesktopDateRangeCalendar-root"><div class="MuiPickersDesktopDateRangeCalendar-rangeCalendarContainer"><div class="MuiPickersArrowSwitcher-root MuiPickersDesktopDateRangeCalendar-arrowSwitcher"><button class="MuiButtonBase-root MuiIconButton-root MuiPickersArrowSwitcher-iconButton Mui-disabled MuiIconButton-sizeSmall Mui-disabled" tabindex="-1" type="button" disabled="" data-mui-test="previous-arrow-button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root Mui-calendar-OFS-calendarArrowIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true" id="calendarArrowLeft"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></span></button><h6 class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-displayInline">November 2025</h6><button class="MuiButtonBase-root MuiIconButton-root MuiPickersArrowSwitcher-iconButton MuiPickersArrowSwitcher-hidden MuiIconButton-sizeSmall" tabindex="0" type="button" data-mui-test="next-arrow-button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root Mui-calendar-OFS-calendarArrowIcon" focusable="false" viewBox="0 0 24 24" aria-hidden="true" id="calendarArrowRight"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div class="MuiPickersCalendar-daysHeader"><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">S</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">M</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">T</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">W</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">T</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">F</span><span class="MuiTypography-root MuiPickersCalendar-weekDayLabel MuiTypography-caption" aria-hidden="true">S</span></div><div class="MuiPickersSlideTransition-root MuiPickersCalendar-root MuiPickersDesktopDateRangeCalendar-calendar"><div role="grid" class="MuiPickersCalendar-weekContainer">... [calendar grid with date buttons] ...</div></div></div><div class="MuiPickersDesktopDateRangeCalendar-rangeCalendarContainer">... [second calendar for end date] ...</div></div></div></div><div class="MuiDialogActions-root Mui-calendar-OFS-dialogActions MuiDialogActions-spacing"><button class="MuiButtonBase-root MuiButton-root MuiButton-text Mui-button-OFS-textButton Mui-button-OFS-textSecondary Mui-calendar-OFS-cancelButton MuiButton-textSecondary" tabindex="0" type="button" id="button-calendarCancelButton"><span class="MuiButton-label">Cancel</span></button><button class="MuiButtonBase-root MuiButton-root MuiButton-contained Mui-button-OFS-button Mui-button-OFS-containedSecondary Mui-button-OFS-large Mui-calendar-OFS-applyButton MuiButton-containedSecondary" tabindex="0" type="button" id="button-calendarApply"><span class="MuiButton-label">Apply</span></button></div></div>
+
+Note: The full HTML is very long. Key elements:
+- Two calendar grids side by side (start and end date selection)
+- Each grid is a .MuiPickersDesktopDateRangeCalendar-rangeCalendarContainer
+- Date buttons have different styling based on their state:
+  * Start date: rangeIntervalDayHighlightStart + Mui-selected
+  * End date: rangeIntervalDayHighlightEnd + Mui-selected  
+  * In-between: rangeIntervalDayHighlight + dayInsideRangeInterval
+  * Outside range: dayOutsideRangeInterval
+  * Today: MuiPickersDay-today
+- Month navigation arrows with .Mui-calendar-OFS-calendarArrowIcon
+- Cancel and Apply buttons at bottom
+
 Complete HTML Structure:
 =======================
 [Full HTML structure copied from browser console - see below]

@@ -1,4 +1,4 @@
-/* change 8 */
+/* change 9 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -93,7 +93,7 @@ p {
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
     font-size: 18px !important; /* 16px + 2px */
     font-weight: normal !important;
-    /* font-family: 'INSTRUMENTSERIF', serif !important; REMOVED FOR NOW - BRITT WANTS THE TIME TO BE ACUMIN */
+    font-family: 'ACUMIN', sans-serif !important;
 }
 
 /* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin, unbold, 16px (18px - 2px) */
@@ -213,4 +213,37 @@ button[class*="Mui-button-OFS"] button {
 .Mui-button-OFS-containedPrimary .MuiTypography-root.Mui-classListHeader-OFS-textGray64,
 .Mui-classesWidget-OFS-classList2 button .MuiTypography-root.Mui-classListHeader-OFS-textGray64 {
     color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Calendar Date Picker - Cobalt Blue for selected date range */
+/* PCC Note: This is suspect, probably don't want the background blue including hover, just the text color */
+/* Start date - Cobalt background */
+.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart .MuiPickersDay-root.Mui-selected,
+.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart .MuiPickersDateRangeDay-rangeIntervalDayPreviewStart .MuiPickersDay-root.Mui-selected {
+    background-color: #171C8F !important; /* Cobalt */
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* End date - Cobalt background */
+.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd .MuiPickersDay-root.Mui-selected,
+.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd .MuiPickersDateRangeDay-rangeIntervalDayPreviewEnd .MuiPickersDay-root.Mui-selected {
+    background-color: #171C8F !important; /* Cobalt */
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* In-between dates - Cobalt background */
+.MuiPickersDateRangeDay-dayInsideRangeInterval,
+.MuiPickersDateRangeDay-rangeIntervalDayHighlight .MuiPickersDay-root.MuiPickersDateRangeDay-dayInsideRangeInterval {
+    background-color: #171C8F !important; /* Cobalt */
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Range highlight containers - Cobalt background for in-between dates */
+.MuiPickersDateRangeDay-rangeIntervalDayHighlight {
+    background-color: #171C8F !important; /* Cobalt */
+}
+
+/* Range interval preview - Cobalt background */
+.MuiPickersDateRangeDay-rangeIntervalPreview {
+    background-color: #171C8F !important; /* Cobalt */
 }
