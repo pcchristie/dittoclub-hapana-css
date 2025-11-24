@@ -39,9 +39,21 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
+/* Class row container - Off-White background */
+.Mui-classesWidget-OFS-classList2 {
+    background-color: #F9F8F2 !important; /* Off-White */
+}
+
 /* Day headings - pure white background */
 .Mui-classesWidget-OFS-listHead {
     background-color: #FFFFFF !important; /* Pure white */
+}
+
+/* Day header text - uppercase and larger */
+.Mui-classesWidget-OFS-listHead .Mui-classesWidget-OFS-h4,
+.Mui-classesWidget-OFS-listHead h4 {
+    text-transform: uppercase !important;
+    font-size: 20px !important; /* 18px + 2px */
 }
 
 /* Typography - Instrument Serif for headings (except H3/H4) */
@@ -80,11 +92,6 @@ p {
     font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
-}
-
-/* Class Session Details Modal H4 - keep default or customize */
-.Mui-classSessionDetailsModal-OFS-h4 {
-    /* Add specific styling here if needed */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
