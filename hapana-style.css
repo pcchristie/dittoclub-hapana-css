@@ -1,4 +1,4 @@
-/* change 7 */
+/* change 8 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -56,11 +56,12 @@
     background-color: #F9F8F2 !important; /* Off-White */
 }
 
-/* Day header text - uppercase and larger */
+/* Day header text - uppercase, slightly larger, force asphalt */
 .Mui-classesWidget-OFS-listHead .Mui-classesWidget-OFS-h4,
 .Mui-classesWidget-OFS-listHead h4 {
     text-transform: uppercase !important;
     font-size: 20px !important; /* 18px + 2px */
+    color: #333F48 !important;
 }
 
 /* Typography - Instrument Serif for headings (except H3/H4) */
@@ -92,15 +93,17 @@ p {
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
     font-size: 18px !important; /* 16px + 2px */
     font-weight: normal !important;
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    /* font-family: 'INSTRUMENTSERIF', serif !important; REMOVED FOR NOW - BRITT WANTS THE TIME TO BE ACUMIN */
 }
 
-/* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin */
+/* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin, unbold, 16px (18px - 2px) */
 .Mui-classesWidget-OFS-block4 h4,
 .Mui-classesWidget-OFS-classList2 h4.status {
     font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
+    font-weight: normal !important; /* Unbold */
+    font-size: 16px !important; /* 18px - 2px */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
@@ -172,7 +175,32 @@ button[class*="Mui-button-OFS"] button {
     color: #F9F8F2 !important; /* Off-White text for all child elements */
 }
 
-/* Calendar Picker - Make textGray64 span white inside Cobalt buttons */
+/* Calendar Picker - Make textGray64 text white inside calendar date filter button */
+/* Very specific selector to only target calendar picker, not other textGray64 elements */
+.Mui-classListHeader-OFS-dateFilter .Mui-classListHeader-OFS-textGray64,
+.Mui-classListHeader-OFS-dateFilter .MuiTypography-root.Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-textPrimary.Mui-classListHeader-OFS-dateFilter .Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-textPrimary.Mui-classListHeader-OFS-dateFilter .MuiTypography-root.Mui-classListHeader-OFS-textGray64 {
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Calendar Picker - Make SVG icons white inside calendar date filter button */
+.Mui-classListHeader-OFS-dateFilter .MuiSvgIcon-root.Mui-classListHeader-OFS-icMedium.Mui-classListHeader-OFS-textGray64,
+.Mui-classListHeader-OFS-dateFilter .MuiSvgIcon-root.Mui-classListHeader-OFS-icSmall.Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-textPrimary.Mui-classListHeader-OFS-dateFilter .MuiSvgIcon-root.Mui-classListHeader-OFS-icMedium.Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-textPrimary.Mui-classListHeader-OFS-dateFilter .MuiSvgIcon-root.Mui-classListHeader-OFS-icSmall.Mui-classListHeader-OFS-textGray64 {
+    color: #F9F8F2 !important; /* Off-White */
+    fill: #F9F8F2 !important; /* Off-White for SVG fill */
+}
+
+/* Login Button - Make user SVG icon white inside clientLogin section */
+.Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root.Mui-classListHeader-OFS-icUser.Mui-classListHeader-OFS-textGray64,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root.Mui-classListHeader-OFS-icUser.Mui-classListHeader-OFS-textGray64 {
+    color: #F9F8F2 !important; /* Off-White */
+    fill: #F9F8F2 !important; /* Off-White for SVG fill */
+}
+
+/* Calendar Picker - Make textGray64 span white inside Cobalt buttons (fallback) */
 /* Using the documented OFS class pattern - target through parent button */
 .Mui-button-OFS-button .Mui-classListHeader-OFS-textGray64,
 .Mui-button-OFS-containedPrimary .Mui-classListHeader-OFS-textGray64,
