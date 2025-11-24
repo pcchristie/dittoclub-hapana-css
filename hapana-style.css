@@ -215,35 +215,21 @@ button[class*="Mui-button-OFS"] button {
     color: #F9F8F2 !important; /* Off-White text */
 }
 
-/* Calendar Date Picker - Cobalt Blue for selected date range */
-/* PCC Note: This is suspect, probably don't want the background blue including hover, just the text color */
-/* Start date - Cobalt background */
+/* Calendar Date Picker - Cobalt Blue text for selected date range */
+/* Start date - Cobalt text */
 .MuiPickersDateRangeDay-rangeIntervalDayHighlightStart .MuiPickersDay-root.Mui-selected,
 .MuiPickersDateRangeDay-rangeIntervalDayHighlightStart .MuiPickersDateRangeDay-rangeIntervalDayPreviewStart .MuiPickersDay-root.Mui-selected {
-    background-color: #171C8F !important; /* Cobalt */
-    color: #F9F8F2 !important; /* Off-White text */
+    color: #171C8F !important; /* Cobalt text */
 }
 
-/* End date - Cobalt background */
+/* End date - Cobalt text */
 .MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd .MuiPickersDay-root.Mui-selected,
 .MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd .MuiPickersDateRangeDay-rangeIntervalDayPreviewEnd .MuiPickersDay-root.Mui-selected {
-    background-color: #171C8F !important; /* Cobalt */
-    color: #F9F8F2 !important; /* Off-White text */
+    color: #171C8F !important; /* Cobalt text */
 }
 
-/* In-between dates - Cobalt background */
+/* In-between dates - Cobalt text */
 .MuiPickersDateRangeDay-dayInsideRangeInterval,
 .MuiPickersDateRangeDay-rangeIntervalDayHighlight .MuiPickersDay-root.MuiPickersDateRangeDay-dayInsideRangeInterval {
-    background-color: #171C8F !important; /* Cobalt */
-    color: #F9F8F2 !important; /* Off-White text */
-}
-
-/* Range highlight containers - Cobalt background for in-between dates */
-.MuiPickersDateRangeDay-rangeIntervalDayHighlight {
-    background-color: #171C8F !important; /* Cobalt */
-}
-
-/* Range interval preview - Cobalt background */
-.MuiPickersDateRangeDay-rangeIntervalPreview {
-    background-color: #171C8F !important; /* Cobalt */
+    color: #171C8F !important; /* Cobalt text */
 }
