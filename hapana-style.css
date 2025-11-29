@@ -106,6 +106,12 @@ p {
     font-size: 16px !important; /* 18px - 2px */
 }
 
+/* Completed/Closed status text - Asphalt color */
+.Mui-classesWidget-OFS-classList2 h4.error,
+.Mui-classesWidget-OFS-h4.error {
+    color: #333F48 !important; /* Asphalt */
+}
+
 /* Generic H4 fallback - Instrument Serif, 18px */
 .MuiTypography-h4 {
     font-family: 'INSTRUMENTSERIF', serif !important;
@@ -242,6 +248,12 @@ button[class*="Mui-button-OFS"] button {
 
 /* In-between dates - Light spearmint background (exclude start/end containers) */
 .MuiPickersDateRangeDay-rangeIntervalDayHighlight:not(.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart):not(.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd) {
+    background-color: #dbefe9a6 !important; /* Light spearmint with transparency */
+}
+
+/* Start and end date containers - Light spearmint background behind the circular date buttons */
+.MuiPickersDateRangeDay-root.MuiPickersDateRangeDay-rangeIntervalDayHighlightStart.MuiPickersDateRangeDay-rangeIntervalDayHighlight,
+.MuiPickersDateRangeDay-root.MuiPickersDateRangeDay-rangeIntervalDayHighlightEnd.MuiPickersDateRangeDay-rangeIntervalDayHighlight {
     background-color: #dbefe9a6 !important; /* Light spearmint with transparency */
 }
 
