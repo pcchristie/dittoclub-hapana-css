@@ -1,4 +1,4 @@
-/* change 14 */
+/* change 15 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -113,6 +113,7 @@ p {
     color: #333F48 !important; /* Asphalt */
     font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
     font-stretch: 100% !important;
+    font-size: 16px !important; /* 18px - 2px */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
@@ -240,7 +241,6 @@ button[class*="Mui-button-OFS"] button {
 .Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin svg use,
 .Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root use {
     fill: #F9F8F2 !important; /* Off-White for SVG fill */
-    stroke: #F9F8F2 !important; /* Off-White for SVG stroke if applicable */
 }
 
 /* Login Button - Target path elements inside SVG (override sprite fill) */
