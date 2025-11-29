@@ -1,4 +1,4 @@
-/* change 13 */
+/* change 14 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -106,10 +106,13 @@ p {
     font-size: 16px !important; /* 18px - 2px */
 }
 
-/* Completed/Closed status text - Asphalt color */
-.Mui-classesWidget-OFS-classList2 h4.error,
-.Mui-classesWidget-OFS-h4.error {
+/* Completed/Closed status text - Asphalt color, Acumin font */
+/* Only target error h4 within block5 section of class rows (not modals) */
+.Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 h4.error,
+.Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 .Mui-classesWidget-OFS-h4.error {
     color: #333F48 !important; /* Asphalt */
+    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    font-stretch: 100% !important;
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
@@ -238,6 +241,28 @@ button[class*="Mui-button-OFS"] button {
 .Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root use {
     fill: #F9F8F2 !important; /* Off-White for SVG fill */
     stroke: #F9F8F2 !important; /* Off-White for SVG stroke if applicable */
+}
+
+/* Login Button - Target path elements inside SVG (override sprite fill) */
+.Mui-classListHeader-OFS-userLogin svg path,
+.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root path,
+.Mui-classListHeader-OFS-clientLogin svg path,
+.Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root path,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin svg path,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root path,
+.Mui-classListHeader-OFS-userLogin svg use path,
+.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root use path {
+    fill: #F9F8F2 !important; /* Off-White for SVG fill */
+}
+
+/* Login Button - Use CSS filter as fallback to make grey icon white */
+.Mui-classListHeader-OFS-userLogin svg,
+.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root,
+.Mui-classListHeader-OFS-clientLogin svg,
+.Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin svg,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root {
+    filter: brightness(0) invert(1) !important; /* Convert any color to white */
 }
 
 /* Calendar Picker - Make textGray64 span white inside Cobalt buttons (fallback) */
