@@ -1,4 +1,4 @@
-/* change 12 */
+/* change 13 */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -201,9 +201,43 @@ button[class*="Mui-button-OFS"] button {
 
 /* Login Button - Make user SVG icon white inside clientLogin section */
 .Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root.Mui-classListHeader-OFS-icUser.Mui-classListHeader-OFS-textGray64,
-.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root.Mui-classListHeader-OFS-icUser.Mui-classListHeader-OFS-textGray64 {
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root.Mui-classListHeader-OFS-icUser.Mui-classListHeader-OFS-textGray64,
+.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root,
+.Mui-classListHeader-OFS-userLogin svg,
+.Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root,
+.Mui-classListHeader-OFS-clientLogin svg,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin svg {
     color: #F9F8F2 !important; /* Off-White */
     fill: #F9F8F2 !important; /* Off-White for SVG fill */
+}
+
+/* Login Button - Ensure button text color is white so SVG can inherit */
+.Mui-classListHeader-OFS-userLogin,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin {
+    color: #F9F8F2 !important; /* Off-White text */
+}
+
+/* Login Button - Target startIcon wrapper and any SVG within it */
+.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon,
+.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon svg,
+.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon .MuiSvgIcon-root,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon svg,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiButton-startIcon .MuiSvgIcon-root {
+    color: #F9F8F2 !important; /* Off-White */
+    fill: #F9F8F2 !important; /* Off-White for SVG fill */
+}
+
+/* Login Button - Target use element inside SVG (for SVG sprites) */
+.Mui-classListHeader-OFS-userLogin svg use,
+.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root use,
+.Mui-classListHeader-OFS-clientLogin svg use,
+.Mui-classListHeader-OFS-clientLogin .MuiSvgIcon-root use,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin svg use,
+.Mui-button-OFS-textSecondary.Mui-classListHeader-OFS-userLogin .MuiSvgIcon-root use {
+    fill: #F9F8F2 !important; /* Off-White for SVG fill */
+    stroke: #F9F8F2 !important; /* Off-White for SVG stroke if applicable */
 }
 
 /* Calendar Picker - Make textGray64 span white inside Cobalt buttons (fallback) */
