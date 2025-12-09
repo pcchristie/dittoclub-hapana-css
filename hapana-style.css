@@ -1,4 +1,4 @@
-/* change 23-buy */
+/* change 24-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -364,6 +364,12 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart::placeholder,
 .MuiInputBase-inputAdornedEnd::placeholder,
 .MuiOutlinedInput-inputAdornedEnd::placeholder {
+    font-family: 'ACUMIN', sans-serif !important;
+}
+
+/* Signup modal "Already have an account?" text */
+#signUpModalAlreadyHaveAccount,
+.Mui-signUpModal-OFS-link#signUpModalAlreadyHaveAccount {
     font-family: 'ACUMIN', sans-serif !important;
 }
 
