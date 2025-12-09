@@ -1,4 +1,4 @@
-/* change 15 */
+/* change 16-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -346,3 +346,75 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
     font-family: 'ACUMIN', sans-serif !important;
     font-stretch: 100% !important;
 }
+
+#packages {
+/* =========================================
+   Package & Membership Widget (ditto.club/buy)
+   ========================================= */
+/* Package cards */
+.Mui-packageCard-OFS-card {
+    background-color: #F9F8F2 !important; /* Off-White */
+    border: 1px solid #171C8F !important;  /* Cobalt */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.Mui-packageCard-OFS-card:hover {
+    box-shadow: 0 10px 24px rgba(23, 28, 143, 0.15) !important; /* Cobalt shadow */
+    transform: translateY(-2px);
+}
+
+/* Package card titles */
+.Mui-packageCard-OFS-title {
+    font-family: 'ACUMIN', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 750 !important;
+    color: #171C8F !important; /* Cobalt */
+    letter-spacing: 0.02em;
+}
+
+/* Section heading above the list (e.g., "Packages", "Memberships") */
+.Mui-cardsList-OFS-title {
+    font-family: 'ACUMIN', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 750 !important;
+    font-size: 20px !important;
+    color: #0F1010 !important; /* Black */
+    letter-spacing: 0.03em;
+}
+
+/* Body copy inside package cards */
+.Mui-packageCard-OFS-card p,
+.Mui-packageCard-OFS-card .MuiTypography-body1,
+.Mui-packageCard-OFS-card .MuiTypography-body2 {
+    font-family: 'ACUMIN', sans-serif !important;
+    color: #333F48 !important; /* Asphalt */
+}
+
+/* Package detail modal */
+.Mui-packageDetails-OFS-standAlonePackageDetails {
+    background-color: #F9F8F2 !important; /* Off-White */
+    border: 1px solid #171C8F !important;  /* Cobalt */
+    border-radius: 0 !important;
+}
+
+.Mui-packageDetailModal-OFS-titleContainer {
+    color: #171C8F !important; /* Cobalt */
+    text-transform: uppercase !important;
+    font-family: 'ACUMIN', sans-serif !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Ensure package buttons inherit our primary style */
+.Mui-packageCard-OFS-card .Mui-button-OFS-button,
+.Mui-packageCard-OFS-card button[class*="Mui-button-OFS"],
+.Mui-packageDetails-OFS-standAlonePackageDetails .Mui-button-OFS-button,
+.Mui-packageDetails-OFS-standAlonePackageDetails button[class*="Mui-button-OFS"] {
+    background-color: #171C8F !important; /* Cobalt */
+    color: #F9F8F2 !important;            /* Off-White */
+    border: 1px solid #171C8F !important;
+    border-radius: 0 !important;
+}
+} /* end #packages scope */

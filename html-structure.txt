@@ -1,3 +1,58 @@
+Packages/Memberships Widget Structure (ditto.club/buy):
+======================================================
+
+Simplified Layout:
+------------------
+.MuiGrid-root.hapana-base#packages
+  ├── .Toastify (id="packages")
+  └── .MuiContainer-root.MuiContainer-maxWidthLg
+      ├── .MuiGrid-root.MuiGrid-container.MuiGrid-align-items-xs-center
+      │   ├── .MuiGrid-root.Mui-logged-OFS-container (status/login bar)
+      │   │   ├── span.Mui-logged-OFS-text ("Not logged in")
+      │   │   └── button#button-packageListingLoginOrRegister.Mui-logged-OFS-button ("Login")
+      │   └── .MuiPopover-root#menu-appbar (logout menu)
+      ├── .MuiGrid-root.Mui-specialOffer-OFS-listContainer
+      │   └── .MuiGrid-root.MuiGrid-item#specialIntroOffer-1
+      │       └── .MuiGrid-root.Mui-specialOffer-OFS-container
+      │           ├── .MuiGrid-root.Mui-specialOffer-OFS-offerContainer
+      │           │   ├── p.Mui-specialOffer-OFS-title ("Intro offer")
+      │           │   ├── p.Mui-specialOffer-OFS-description.Mui-specialOffer-OFS-bold (name)
+      │           │   └── p.Mui-specialOffer-OFS-description (long description)
+      │           └── .MuiGrid-root.Mui-specialOffer-OFS-priceContainer
+      │               └── p.Mui-specialOffer-OFS-price
+      ├── .MuiGrid-root (class packs section)
+      │   ├── p.Mui-cardsList-OFS-title ("Ditto Class Packs")
+      │   └── .MuiGrid-root.Mui-cardsList-OFS-gridCards
+      │       └── multiple items → .MuiGrid-item containing .Mui-packageCard-OFS-card
+      └── .MuiGrid-root (memberships section)
+          ├── p.Mui-cardsList-OFS-title ("Ditto Memberships")
+          └── .MuiGrid-root.Mui-cardsList-OFS-gridCards
+              └── multiple items → .MuiGrid-item containing .Mui-packageCard-OFS-card
+
+Key Classes for CSS:
+--------------------
+- Main container: `.hapana-base#packages`
+- Status/login bar: `.Mui-logged-OFS-container`, text `.Mui-logged-OFS-text`, button `.Mui-logged-OFS-button` (`#button-packageListingLoginOrRegister`)
+- User popover: `.MuiPopover-root#menu-appbar` with logout item `.Mui-userPopover-OFS-ddMenu`
+- Intro offer: `.Mui-specialOffer-OFS-listContainer` → `.Mui-specialOffer-OFS-container`
+  * Title: `.Mui-specialOffer-OFS-title`
+  * Name: `.Mui-specialOffer-OFS-description.Mui-specialOffer-OFS-bold`
+  * Description: `.Mui-specialOffer-OFS-description`
+  * Price: `.Mui-specialOffer-OFS-price`
+- Section headers: `.Mui-cardsList-OFS-title`
+- Card grid: `.Mui-cardsList-OFS-gridCards` with grid items
+- Product card: `.Mui-packageCard-OFS-card` (also `.MuiCard-root`)
+  * Meta stack: `.Mui-packageCard-OFS-meta` → `.Mui-packageCard-OFS-title`, `.Mui-packageCard-OFS-subtitle`
+  * Price: `.Mui-packageCard-OFS-price`
+  * Frequency (memberships): `.Mui-packageCard-OFS-frequency`
+
+Notes:
+------
+- Each card has `data-id`, `data-name`, and unique `id` (e.g., `day-1-supporters-0`, `ditto-double-0`).
+- Packs and memberships share the same card structure; only frequency appears on memberships.
+- The popover menu is hidden by default (`visibility: hidden`) until opened.
+
+
 Hapana Widget HTML Structure Reference
 ======================================
 
