@@ -1,4 +1,4 @@
-/* change 17-buy */
+/* change 18-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -379,7 +379,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
     font-family: 'INSTRUMENTSERIF', serif !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
-    font-size: 20px !important;
+    font-size: 28px !important;
     color: #333F48 !important; /* Asphalt */
     letter-spacing: 0.03em;
 }
@@ -421,7 +421,20 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Container background and spacing */
 .MuiContainer-root.MuiContainer-maxWidthLg {
     background-color: #F9F8F2 !important; /* Off-White */
-    padding: 24px 16px 16px !important;
+    padding: 24px 28px 16px !important;
+}
+
+/* Intro offer strip */
+.Mui-specialOffer-OFS-container {
+    background-color: #B9DCD2 !important; /* Spearmint */
+    border-radius: 0 !important;
+    padding: 16px !important;
+}
+
+.Mui-specialOffer-OFS-description.Mui-specialOffer-OFS-bold,
+.Mui-specialOffer-OFS-description,
+.Mui-specialOffer-OFS-price {
+    color: #171C8F !important; /* Cobalt */
 }
 
 /* Hide "Not logged in" label */
