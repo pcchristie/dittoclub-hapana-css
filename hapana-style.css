@@ -1,4 +1,4 @@
-/* change 21-buy */
+/* change 22-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -369,8 +369,9 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 }
 
 /* Login/Signup modal inputs (override button input color rule) */
-.Mui-loginModal-OFS-dialogContainer .MuiInputBase-root input.MuiInputBase-input,
-.Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root input.MuiOutlinedInput-input {
+.Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.MuiInputBase-colorSecondary input.MuiInputBase-input,
+.Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root.MuiOutlinedInput-colorSecondary input.MuiOutlinedInput-input,
+.Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.Mui-formField-OFS-msReveal input.MuiInputBase-input {
     font-family: 'ACUMIN', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
