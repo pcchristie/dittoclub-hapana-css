@@ -369,22 +369,14 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 }
 
 /* Login/Signup modal inputs (override button input color rule) */
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-input,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-input,
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedStart,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedStart,
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedEnd,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedEnd {
+.Mui-loginModal-OFS-dialogContainer .MuiInputBase-root input.MuiInputBase-input,
+.Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root input.MuiOutlinedInput-input {
     font-family: 'ACUMIN', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-input::placeholder,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-input::placeholder,
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedStart::placeholder,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedStart::placeholder,
-.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedEnd::placeholder,
-.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedEnd::placeholder {
+.Mui-loginModal-OFS-dialogContainer .MuiInputBase-root input.MuiInputBase-input::placeholder,
+.Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root input.MuiOutlinedInput-input::placeholder {
     font-family: 'ACUMIN', sans-serif !important;
 }
 
