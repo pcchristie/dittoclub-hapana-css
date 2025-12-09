@@ -1,4 +1,4 @@
-/* change 19-buy */
+/* change 20-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -365,6 +365,26 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart::placeholder,
 .MuiInputBase-inputAdornedEnd::placeholder,
 .MuiOutlinedInput-inputAdornedEnd::placeholder {
+    font-family: 'ACUMIN', sans-serif !important;
+}
+
+/* Login/Signup modal inputs (override button input color rule) */
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-input,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-input,
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedStart,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedStart,
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedEnd,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedEnd {
+    font-family: 'ACUMIN', sans-serif !important;
+    color: #333F48 !important; /* Asphalt */
+}
+
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-input::placeholder,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-input::placeholder,
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedStart::placeholder,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedStart::placeholder,
+.Mui-loginModal-OFS-dialogContainer input.MuiInputBase-inputAdornedEnd::placeholder,
+.Mui-loginModal-OFS-dialogContainer input.MuiOutlinedInput-inputAdornedEnd::placeholder {
     font-family: 'ACUMIN', sans-serif !important;
 }
 
