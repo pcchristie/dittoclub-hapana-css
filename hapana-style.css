@@ -1,4 +1,4 @@
-/* change 25-buy */
+/* change 26-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -373,17 +373,33 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
     font-family: 'ACUMIN', sans-serif !important;
 }
 
-/* Package terms modal subtitle spacing */
+/* Package terms modal subtitle overflow onto two lines to avoid going behind top left and right buttons */
 .Mui-packageTerms-OFS-packageSubtitle {
-    margin-top: 8px !important;
+    /* margin-top: 8px !important; */
     display: block;
+    width: 75%;
+    margin: auto;
 }
 
 /* Stepper "Review" link text */
 #linkStepper,
 .Mui-stepper-OFS-linkStepper#linkStepper {
     font-family: 'ACUMIN', sans-serif !important;
+    margin: auto; /* center the text vertically alongside the other steps (was floating before this) */
 }
+
+/* Privacy policy modal title on separate lines */
+.Mui-classPrivacyPolicyModal-OFS-policyName.MuiTypography-h1.MuiTypography-gutterBottom {
+    display: block !important;
+}
+
+/* Privacy policy modal body text to Acumin */
+.Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1,
+.Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1 * {
+    font-family: 'ACUMIN', sans-serif !important;
+}
+
+
 
 /* Login/Signup modal inputs (override button input color rule) */
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.MuiInputBase-colorSecondary input.MuiInputBase-input,
