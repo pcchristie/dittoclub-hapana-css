@@ -160,8 +160,6 @@ p {
 .Mui-button-OFS-containedPrimary button,
 input[type="date"],
 input[type="text"][class*="date"],
-.MuiInputBase-root input,
-.MuiInputBase-input,
 button[class*="Mui-button-OFS"] input,
 button[class*="Mui-button-OFS"] button {
     color: #F9F8F2 !important; /* Off-White text */
