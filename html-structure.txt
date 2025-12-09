@@ -86,6 +86,17 @@ Actions:
 - Secondary actions: `.Mui-packageTerms-OFS-logoutButton`, `.Mui-packageTerms-OFS-cancelButton`
 - Edit signature: `#button-packageTermsModalEdit`
 
+Privacy Policy Modal (Packages/Memberships):
+============================================
+- Container/content: `.MuiDialogContent-root.Mui-classPrivacyPolicyModal-OFS-dialogContent[...PackageSignup]`
+- Policy wrapper: `.Mui-classPrivacyPolicyModal-OFS-policyWordings.MuiGrid-container`
+- Heading row: `.Mui-classPrivacyPolicyModal-OFS-policyHeading` (parent; ignore dynamic `jss*`)
+  * Back link: `#classPrivacyPolicyReturnToSignUp` (`.Mui-classPrivacyPolicyModal-OFS-actionButton`, includes icon + text)
+  * Title: `.Mui-classPrivacyPolicyModal-OFS-policyName.MuiTypography-h1.MuiTypography-gutterBottom`
+- Divider: `.Mui-classPrivacyPolicyModal-OFS-divider`
+- Last updated: `.Mui-classPrivacyPolicyModal-OFS-textGray56`
+- Body text: `.Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1` (contains all policy copy)
+
 
 Hapana Widget HTML Structure Reference
 ======================================
