@@ -1,4 +1,4 @@
-/* change 16-buy */
+/* change 17-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -376,11 +376,11 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Section heading above the list (e.g., "Packages", "Memberships") */
 .Mui-cardsList-OFS-title {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'INSTRUMENTSERIF', serif !important;
     text-transform: uppercase !important;
-    font-weight: 750 !important;
+    font-weight: 700 !important;
     font-size: 20px !important;
-    color: #0F1010 !important; /* Black */
+    color: #333F48 !important; /* Asphalt */
     letter-spacing: 0.03em;
 }
 
@@ -416,5 +416,24 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
     color: #F9F8F2 !important;            /* Off-White */
     border: 1px solid #171C8F !important;
     border-radius: 0 !important;
+}
+
+/* Container background and spacing */
+.MuiContainer-root.MuiContainer-maxWidthLg {
+    background-color: #F9F8F2 !important; /* Off-White */
+    padding: 24px 16px 16px !important;
+}
+
+/* Hide "Not logged in" label */
+.Mui-logged-OFS-text {
+    display: none !important;
+}
+
+/* Login button sizing (status bar) */
+.Mui-logged-OFS-button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    min-height: 36px !important;
 }
 } /* end #packages scope */
