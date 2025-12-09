@@ -1,4 +1,4 @@
-/* change 22-buy */
+/* change 23-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -166,6 +166,7 @@ button[class*="Mui-button-OFS"] button {
 }
 
 /* Ensure all text inside Cobalt buttons is white */
+/* PCC NOTE: This is a temporary change to narrow scope and see if things are unchanged so that we can change input colours. */
 .Mui-button-OFS-button,
 .Mui-button-OFS-containedPrimary,
 .Mui-button-OFS-containedSecondary,
