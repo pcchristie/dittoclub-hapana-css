@@ -52,6 +52,40 @@ Notes:
 - Packs and memberships share the same card structure; only frequency appears on memberships.
 - The popover menu is hidden by default (`visibility: hidden`) until opened.
 
+Checkout Modal (Packages/Memberships) – Stepper:
+================================================
+Container:
+- `.MuiDialog-container` (dialog wrapper)
+- `.MuiDialog-paper.Mui-signUpPackageModal-OFS-dialogContainerPackage.Mui-signUpPackageModal-OFS-dialogContainer`
+
+Header:
+- `.Mui-packageTerms-OFS-dialogTitle`
+  * Title: `.Mui-packageTerms-OFS-packageTitle`
+  * Subtitle: `.Mui-packageTerms-OFS-packageSubtitle`
+
+Stepper (breadcrumbs):
+- `.MuiStepper-root.Mui-stepper-OFS-root` (horizontal stepper)
+- Steps: `.MuiStep-root` with state classes (`MuiStep-completed`, `MuiStep-active`, `Mui-disabled`)
+- Labels: `.Mui-stepper-OFS-label` containing `.MuiStepLabel-labelContainer`
+- Icons:
+  * Completed: `.MuiStepIcon-root.MuiStepIcon-completed` (checkmark SVG)
+  * Active: `.MuiStepIcon-root.MuiStepIcon-active` (numbered circle)
+  * Default: `.MuiStepIcon-root` (numbered circle)
+- Connectors: `.MuiStepConnector-root` with state classes (`MuiStepConnector-completed`, `MuiStepConnector-active`, `.Mui-disabled`)
+- Link back step (e.g., “Review”): button `.Mui-stepper-OFS-linkStepper#linkStepper`
+- Example step labels: “Sign up”, “Additional info”, “Review”, “Agreement”, “Checkout”
+
+Body:
+- `.MuiDialogContent-root.Mui-packageTerms-OFS-dialogContent`
+  * Terms text: `.Mui-packageTerms-OFS-terms`
+- Signature area: canvas `#pacakegeTermsModalSignature` inside `.Mui-packageTerms-OFS-signature`
+  * Rendered signature image: `.Mui-packageTerms-OFS-signatureImage img`
+
+Actions:
+- Primary CTA: `.Mui-packageTerms-OFS-submitButton` (e.g., “Agree and proceed”)
+- Secondary actions: `.Mui-packageTerms-OFS-logoutButton`, `.Mui-packageTerms-OFS-cancelButton`
+- Edit signature: `#button-packageTermsModalEdit`
+
 
 Hapana Widget HTML Structure Reference
 ======================================
