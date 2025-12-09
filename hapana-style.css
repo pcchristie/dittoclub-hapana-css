@@ -1,4 +1,4 @@
-/* change 18-buy */
+/* change 19-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
    ========================================= */
@@ -345,6 +345,27 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 #loginModalHelp {
     font-family: 'ACUMIN', sans-serif !important;
     font-stretch: 100% !important;
+}
+
+/* Login modal inputs - make entered text readable (asphalt) */
+.MuiInputBase-input,
+.MuiOutlinedInput-input,
+.MuiInputBase-inputAdornedStart,
+.MuiOutlinedInput-inputAdornedStart,
+.MuiInputBase-inputAdornedEnd,
+.MuiOutlinedInput-inputAdornedEnd {
+    font-family: 'ACUMIN', sans-serif !important;
+    color: #333F48 !important; /* Asphalt */
+}
+
+/* Placeholder text font */
+.MuiInputBase-input::placeholder,
+.MuiOutlinedInput-input::placeholder,
+.MuiInputBase-inputAdornedStart::placeholder,
+.MuiOutlinedInput-inputAdornedStart::placeholder,
+.MuiInputBase-inputAdornedEnd::placeholder,
+.MuiOutlinedInput-inputAdornedEnd::placeholder {
+    font-family: 'ACUMIN', sans-serif !important;
 }
 
 #packages {
