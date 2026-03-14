@@ -41,7 +41,7 @@ Typographic Suite:
         Acumin Regular
 
     Buttons (40px Spacing)
-        Acuming Bold
+        Acumin Bold
 
 Current Site CSS for context:
 **Note this may need to be re-declared in this CSS if Hapana can't read off the master stylesheet. I'm not sure.

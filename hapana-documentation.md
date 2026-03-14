@@ -1,3 +1,5 @@
+# Documentation from Hapana's Website
+
 Use Case
 “As a business user, I want customize the look and feel of the Embed Widgets to match my brand and website design.”
 
@@ -25,8 +27,7 @@ border: 1px solid red;
 }
 Results in:
 
-
-
+> **[Screenshot description]** Side-by-side before/after of the Packages widget. Default (left): white cards with no border, arranged in a grid. Custom (right): the same cards now have a visible red border around each `.Mui-packageCard-OFS-card` element. Demonstrates that the class correctly targets individual package cards.
 
 
 
@@ -40,9 +41,9 @@ As another example, here is how to modify the Login button on a widget:
 }
 Results in:
 
+> **[Screenshot description]** Shows the Login/Sign Up modal. The dialog actions section at the bottom (containing the Login and Register buttons) now has a visible dodgerblue border and increased padding around it. The buttons themselves are unchanged — only the container `div` is targeted via the `> div` child selector.
 
 
- 
 
 Example CSS
 Here are two example of simple CSS files for your reference.
@@ -76,12 +77,13 @@ background-color: white;
 }
 Image below shows the default style and the resulting custom style
 
-
-
+> **[Screenshot description]** Side-by-side before/after of the Packages widget buttons. Default (left): standard MUI blue contained buttons and outlined buttons with default styling. Custom (right): contained primary and secondary buttons are now saddlebrown background with orange border, turning salmon on hover. Outlined buttons have a saddlebrown border on a white background. All buttons have `border-radius: 0` (square corners).
 
 
 Example Customizing Title Colors and Font for Classes Widget
 Image below shows the default style and the resulting custom style
+
+> **[Screenshot description]** Side-by-side before/after of the Classes (Schedule) widget. Default (left): day headings and class names in standard MUI blue/grey, default sans-serif font. Custom (right): day headings (`.Mui-classesWidget-OFS-h4`) are black, class session names (`.Mui-classesWidget-OFS-classList2 h3`) are teal (`#3fffc0`), body text uses `MuseoSans-300`. Book buttons have `border-radius: 0`.
 
 /* Common Typography */
 .MuiTypography-body1 {
@@ -355,8 +357,9 @@ If the element or particular attribute you wish to modify is not provided in the
 Inspect the running widget with DevTools (how to inspect elements)
 Select the desired part of the widget, as the picture below
 
+> **[Screenshot description]** Browser DevTools Elements panel open with the Hapana Packages widget loaded. A package card is selected in the DOM tree. The inspector highlights the element and shows its full class string in the HTML — including `Mui-packageCard-OFS-card` alongside dynamic `jss*` classes. The Styles panel on the right shows CSS rules applied to each class.
 
- 
+
 
 In the picture, Mui-packageCard-OFS-card is defined in the class of the div inspected. Note that class has multiple classes separated by space ( ).
 
@@ -372,11 +375,9 @@ The classes with name jss<number> for example jss123, are generated dynamically 
 
 Thus, you should not customize these classes directly. Instead, use the class of the parent element to override its children.
 
+> **[Screenshot description]** DevTools inspector showing an element with class `MuiBox-root jss7` — a `div` inside the login modal's dialog actions section. The `jss7` class name is dynamically generated and will change between Hapana widget releases. The stable parent element `Mui-loginModal-OFS-dialogActions` is visible one level up in the DOM tree. The correct approach is to target the parent and use a child selector (`> div`) rather than targeting `jss7` directly.
 
-
- 
-
-In the above picture, in order to style the element <div class="MuiBox-root jss7"> , we should style its parent <div class="MuiDialogActions-root Mui-loginModal-OFS-dialogActions">.
+In the above picture, in order to style the element `<div class="MuiBox-root jss7">`, we should style its parent `<div class="MuiDialogActions-root Mui-loginModal-OFS-dialogActions">`.
 
 For Example:
 

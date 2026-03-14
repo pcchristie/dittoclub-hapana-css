@@ -1,3 +1,10 @@
+# Hapana Widget HTML Structure Reference
+
+> Live-inspected DOM trees for each Hapana embed widget. Use this when targeting specific elements with CSS.
+> Class naming convention: `Mui-<widgetName>-OFS-<elementName>` — these are stable. `jss*` classes are dynamic — do not target them.
+
+---
+
 Packages/Memberships Widget Structure (ditto.club/buy):
 ======================================================
 
