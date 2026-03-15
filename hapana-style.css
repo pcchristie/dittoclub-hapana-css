@@ -1,3 +1,12 @@
+/* =========================================
+   TEST BRANCH — served to test.ditto.club only
+   Remove this block before merging to main
+   ========================================= */
+.hapana-base#packages {
+  border-top: 4px solid #B9DCD2 !important;
+}
+/* ========================================= */
+
 /* change 27-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
