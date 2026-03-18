@@ -6,19 +6,42 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'ACUMIN';
-    src: url('https://cdn.jsdelivr.net/gh/pcchristie/dittoclub-hapana-css@test/fonts/AcuminVariableConcept.otf');
+    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
+    font-weight: 100 900;
+    font-stretch: 75% 100%;
+}
+
+/* Also declare as 'Acumin Variable Concept' to match page CSS font-family name */
+@font-face {
+    font-family: 'Acumin Variable Concept';
+    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
     font-weight: 100 900;
     font-stretch: 75% 100%;
 }
 
 @font-face {
     font-family: 'INSTRUMENTSERIF';
-    src: url('https://cdn.jsdelivr.net/gh/pcchristie/dittoclub-hapana-css@test/fonts/InstrumentSerif-Regular.ttf');
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
 }
 
 @font-face {
     font-family: 'INSTRUMENTITALIC';
-    src: url('https://cdn.jsdelivr.net/gh/pcchristie/dittoclub-hapana-css@test/fonts/InstrumentSerif-Italic.ttf');
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
+}
+
+/* Also declare as 'Instrument Serif' to match page CSS font-family name */
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
 }
 
 /* Main Widget Background - Off-White */
