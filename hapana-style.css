@@ -48,7 +48,7 @@
 .Mui-classesWidget-OFS-listHead .Mui-classesWidget-OFS-h4,
 .Mui-classesWidget-OFS-listHead h4 {
     text-transform: uppercase !important;
-    font-size: 20px !important; /* 18px + 2px */
+    font-size: 1.25rem !important; /* 18px + 2px */
     color: #333F48 !important;
 }
 
@@ -74,12 +74,12 @@ p {
 /* Class List Day Heading - Instrument Serif, 18px */
 .Mui-classesWidget-OFS-h4 {
     font-family: 'Instrument Serif', serif !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important;
 }
 
 /* Class List Time (h4 in first child of classList2) - 18px (16px + 2px), unbold, Instrument Serif */
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
-    font-size: 16px !important; /* 16px + 2px */
+    font-size: 1rem !important; /* 16px + 2px */
     font-weight: normal !important;
     font-family: 'Acumin Variable Concept', sans-serif !important;
 }
@@ -91,7 +91,7 @@ p {
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
     font-weight: normal !important; /* Unbold */
-    font-size: 16px !important; /* 18px - 2px */
+    font-size: 1rem !important; /* 18px - 2px */
 }
 
 /* Completed/Closed status text - Asphalt color, Acumin font */
@@ -101,13 +101,13 @@ p {
     color: #333F48 !important; /* Asphalt */
     font-family: 'Acumin Variable Concept', sans-serif !important; /* Acumin font */
     font-stretch: 100% !important;
-    font-size: 16px !important; /* 18px - 2px */
+    font-size: 1rem !important; /* 18px - 2px */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
 .MuiTypography-h4 {
     font-family: 'Instrument Serif', serif !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important;
 }
 
 /* Buttons - Cobalt Background */
@@ -440,7 +440,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
     font-family: 'Instrument Serif', serif !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
-    font-size: 28px !important;
+    font-size: 1.75rem !important;
     color: #333F48 !important; /* Asphalt */
     letter-spacing: 0.03em;
 }
@@ -506,7 +506,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Login button sizing (status bar) */
 .Mui-logged-OFS-button {
     padding: 8px 16px !important;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
     font-weight: 700 !important;
     min-height: 36px !important;
 }
