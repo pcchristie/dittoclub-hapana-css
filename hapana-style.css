@@ -6,19 +6,19 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'ACUMIN';
-    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
+    src: url('https://raw.githubusercontent.com/pcchristie/dittoclub-hapana-css/test/fonts/AcuminVariableConcept.otf');
     font-weight: 100 900;
     font-stretch: 75% 100%;
 }
 
 @font-face {
     font-family: 'INSTRUMENTSERIF';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
+    src: url('https://raw.githubusercontent.com/pcchristie/dittoclub-hapana-css/test/fonts/InstrumentSerif-Regular.ttf');
 }
 
 @font-face {
     font-family: 'INSTRUMENTITALIC';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
+    src: url('https://raw.githubusercontent.com/pcchristie/dittoclub-hapana-css/test/fonts/InstrumentSerif-Italic.ttf');
 }
 
 /* Main Widget Background - Off-White */
