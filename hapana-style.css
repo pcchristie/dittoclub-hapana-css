@@ -4,45 +4,10 @@
    ========================================= */
 
 /* Font Face Declarations */
-@font-face {
-    font-family: 'ACUMIN';
-    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
-    font-weight: 100 900;
-    font-stretch: 75% 100%;
-}
-
-/* Also declare as 'Acumin Variable Concept' to match page CSS font-family name */
-@font-face {
-    font-family: 'Acumin Variable Concept';
-    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
-    font-weight: 100 900;
-    font-stretch: 75% 100%;
-}
-
-@font-face {
-    font-family: 'INSTRUMENTSERIF';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'INSTRUMENTITALIC';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
-}
-
-/* Also declare as 'Instrument Serif' to match page CSS font-family name */
-@font-face {
-    font-family: 'Instrument Serif';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Instrument Serif';
-    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
-    font-weight: 400;
-    font-style: italic;
-}
+/* Note (test branch): widget is DOM-injected on the Astro site, so page fonts
+   ('Acumin Variable Concept', 'Instrument Serif') are already in the same cascade
+   via global.css. No separate @font-face declarations needed here for test.
+   Rules below reference those names directly so the browser uses the already-loaded fonts. */
 
 /* Main Widget Background - Off-White */
 .Mui-modalLayout-OFS-dialogContainer {
@@ -93,7 +58,7 @@
 .MuiTypography-body2,
 .MuiTypography-h1,
 .MuiTypography-h2 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
 }
 
 /* H3 and Paragraph - Acumin (Body Text) */
@@ -101,14 +66,14 @@
 .MuiTypography-body1,
 .MuiTypography-body2,
 p {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
 /* H4 - Specific styling for different areas */
 /* Class List Day Heading - Instrument Serif, 18px */
 .Mui-classesWidget-OFS-h4 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
     font-size: 18px !important;
 }
 
@@ -116,13 +81,13 @@ p {
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
     font-size: 16px !important; /* 16px + 2px */
     font-weight: normal !important;
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin, unbold, 16px (18px - 2px) */
 .Mui-classesWidget-OFS-block4 h4,
 .Mui-classesWidget-OFS-classList2 h4.status {
-    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    font-family: 'Acumin Variable Concept', sans-serif !important; /* Acumin font */
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
     font-weight: normal !important; /* Unbold */
@@ -134,14 +99,14 @@ p {
 .Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 h4.error,
 .Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 .Mui-classesWidget-OFS-h4.error {
     color: #333F48 !important; /* Asphalt */
-    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    font-family: 'Acumin Variable Concept', sans-serif !important; /* Acumin font */
     font-stretch: 100% !important;
     font-size: 16px !important; /* 18px - 2px */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
 .MuiTypography-h4 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
     font-size: 18px !important;
 }
 
@@ -344,7 +309,7 @@ button[class*="Mui-button-OFS"] button {
 .Mui-loginModal-OFS-logIn .Mui-loginModal-OFS-title,
 .Mui-loginModal-OFS-signUp .Mui-loginModal-OFS-title,
 h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     text-transform: uppercase !important;
     font-weight: 750 !important;
     font-stretch: 100% !important;
@@ -355,7 +320,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-signUp .MuiButton-label,
 #button-loginModalLogin .MuiButton-label,
 #button-loginModalSignUp .MuiButton-label {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
@@ -365,7 +330,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-dialogActions .Mui-loginModal-OFS-link,
 #loginModalForgotPassword,
 #loginModalHelp {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
@@ -376,7 +341,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart,
 .MuiInputBase-inputAdornedEnd,
 .MuiOutlinedInput-inputAdornedEnd {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
@@ -387,13 +352,13 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart::placeholder,
 .MuiInputBase-inputAdornedEnd::placeholder,
 .MuiOutlinedInput-inputAdornedEnd::placeholder {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Signup modal "Already have an account?" text */
 #signUpModalAlreadyHaveAccount,
 .Mui-signUpModal-OFS-link#signUpModalAlreadyHaveAccount {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Package terms modal subtitle overflow onto two lines to avoid going behind top left and right buttons */
@@ -407,7 +372,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Stepper "Review" link text */
 #linkStepper,
 .Mui-stepper-OFS-linkStepper#linkStepper {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     margin: auto; /* center the text vertically alongside the other steps (was floating before this) */
 }
 
@@ -419,7 +384,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Privacy policy modal body text to Acumin */
 .Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1,
 .Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1 * {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Privacy policy modal heading container (avoid jss*) */
@@ -434,13 +399,13 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.MuiInputBase-colorSecondary input.MuiInputBase-input,
 .Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root.MuiOutlinedInput-colorSecondary input.MuiOutlinedInput-input,
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.Mui-formField-OFS-msReveal input.MuiInputBase-input {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root input.MuiInputBase-input::placeholder,
 .Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root input.MuiOutlinedInput-input::placeholder {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 #packages {
@@ -463,7 +428,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Package card titles */
 .Mui-packageCard-OFS-title {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     text-transform: uppercase !important;
     font-weight: 750 !important;
     color: #171C8F !important; /* Cobalt */
@@ -472,7 +437,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Section heading above the list (e.g., "Packages", "Memberships") */
 .Mui-cardsList-OFS-title {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
     font-size: 28px !important;
@@ -484,7 +449,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-packageCard-OFS-card p,
 .Mui-packageCard-OFS-card .MuiTypography-body1,
 .Mui-packageCard-OFS-card .MuiTypography-body2 {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
@@ -498,7 +463,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-packageDetailModal-OFS-titleContainer {
     color: #171C8F !important; /* Cobalt */
     text-transform: uppercase !important;
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-weight: 750 !important;
     letter-spacing: 0.02em;
 }
