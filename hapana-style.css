@@ -1,12 +1,3 @@
-/* =========================================
-   TEST BRANCH — served to test.ditto.club only
-   Remove this block before merging to main
-   ========================================= */
-.hapana-base#packages {
-  border-top: 4px solid #B9DCD2 !important;
-}
-/* ========================================= */
-
 /* change 27-buy */
 /* =========================================
    Hapana Widget - Ditto Club Brand Styling
@@ -15,19 +6,19 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'ACUMIN';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c45eb0925205c1ca77/1759465928300/AcuminVariableConcept.otf');
+    src: url('https://test.ditto.club/fonts/AcuminVariableConcept.otf');
     font-weight: 100 900;
     font-stretch: 75% 100%;
 }
 
 @font-face {
     font-family: 'INSTRUMENTSERIF';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c9e222354b5b916bfc/1759465929940/InstrumentSerif-Regular.ttf');
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
 }
 
 @font-face {
     font-family: 'INSTRUMENTITALIC';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c95a36b704e0fa5d02/1759465929939/InstrumentSerif-Italic.ttf');
+    src: url('https://test.ditto.club/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf');
 }
 
 /* Main Widget Background - Off-White */
