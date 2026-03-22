@@ -158,9 +158,9 @@ See `html-structure.md` for the full DOM tree of each widget.
 
 ## Open Items
 
-- [ ] Deploy updated Worker code (Referer-based test/prod branching)
-- [ ] Create `test` branch in this repo
-- [ ] Verify branching works on test.ditto.club; fall back to `?env=test` query param if Referer is unreliable
+- [x] Deploy updated Worker code (Referer-based test/prod branching) — live and confirmed working
+- [x] Create `test` branch in this repo
+- [x] Verify branching works on test.ditto.club — confirmed via spearmint border test
 - [ ] Fix Hapana booking widget mobile CSS — widget currently doesn't scale well on mobile. **Do not hide it** (old Squarespace site hid it on mobile and showed an app-download message instead — that was a workaround, not a solution). Needs proper responsive CSS.
-- [ ] Fix widget fonts on test.ditto.club — `hapana-style.css` currently loads fonts from Squarespace CDN URLs which Squarespace blocks when requested from non-Squarespace domains. Fix: update `@font-face` URLs to point to the Astro site (`https://test.ditto.club/fonts/...` for test branch, `https://ditto.club/fonts/...` for main). Font files already exist in `dittoclub-website/public/fonts/`. **Requires CSS branching to be live first** — otherwise changing the URLs breaks prod. Do not attempt until the Cloudflare Worker test/prod branch split is deployed.
-- [x] ~~Confirm whether fonts need to be self-hosted inside this repo or if the Squarespace CDN URLs remain usable during transition~~ — Squarespace CDN URLs work on prod but break on test.ditto.club. Must migrate to Astro site URLs after CSS branching.
+- [x] Fix widget fonts on test.ditto.club — removed all `@font-face` declarations and custom font-family names (`'INSTRUMENTSERIF'`, `'ACUMIN'`) from test branch. All rules now reference `'Instrument Serif'` and `'Acumin Variable Concept'` to match global.css. Widget is DOM-injected on the Astro site so page fonts are in the same cascade — no separate font loading needed. Go-live: merge test → main, same approach applies.
+- [x] ~~Confirm whether fonts need to be self-hosted inside this repo or if the Squarespace CDN URLs remain usable during transition~~ — resolved by removing @font-face entirely from test branch; using page fonts directly.

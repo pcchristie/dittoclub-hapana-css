@@ -84,6 +84,13 @@ p {
     font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
+/* Book button cell - vertically centre the button within its grid cell (fixes mobile alignment) */
+.Mui-classesWidget-OFS-block5 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
 /* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin, unbold, 16px (18px - 2px) */
 .Mui-classesWidget-OFS-block4 h4,
 .Mui-classesWidget-OFS-classList2 h4.status {
@@ -124,6 +131,7 @@ p {
     color: #F9F8F2 !important;           /* Off-White text */
     border: 1px solid #171C8F !important; /* Cobalt border */
     border-radius: 0 !important;         /* Square corners */
+    padding: 8px 20px !important;        /* Consistent clearance regardless of label length */
 }
 
 /* Button Hover */
@@ -303,6 +311,34 @@ button[class*="Mui-button-OFS"] button {
     background-color: #dbefe9a6 !important; /* Light spearmint with transparency */
 }
 
+/* "Sign in" inline link on the Create Account screen — plain cobalt text, no button box */
+/* Scoped tightly to Mui-createAccountTitle-OFS-signIn to avoid affecting any other buttons */
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn,
+.Mui-createAccountTitle-OFS-signIn {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    color: #171C8F !important; /* Cobalt */
+    text-decoration: underline !important;
+    text-underline-offset: 2px !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+}
+
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn *,
+.Mui-createAccountTitle-OFS-signIn * {
+    color: #171C8F !important; /* Cobalt */
+}
+
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn:hover,
+.Mui-createAccountTitle-OFS-signIn:hover {
+    background-color: transparent !important;
+    opacity: 0.7 !important;
+}
+
 /* Login Modal Styling */
 /* Login and Sign Up titles - Acumin, uppercase, font-weight 750 */
 .Mui-loginModal-OFS-dialogContainer .Mui-loginModal-OFS-title,
@@ -455,9 +491,10 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Package detail modal */
 .Mui-packageDetails-OFS-standAlonePackageDetails {
-    background-color: #F9F8F2 !important; /* Off-White */
-    border: 1px solid #171C8F !important;  /* Cobalt */
+    background-color: transparent !important;
+    border: none !important;
     border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .Mui-packageDetailModal-OFS-titleContainer {
