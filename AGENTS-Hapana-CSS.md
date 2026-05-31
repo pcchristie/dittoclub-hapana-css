@@ -67,6 +67,16 @@ Full Worker code for both the current and planned setup lives in `AGENTS-Master.
 - **Do not target `jss*` classes** (e.g., `jss123`). These are dynamically generated per Hapana release and will break on any widget update. Always target the stable `Mui-*-OFS-*` classes or standard MUI classes instead.
 - When a stable selector isn't in `hapana-documentation.md`, use browser DevTools to inspect the live widget, find the nearest ancestor with a `Mui-*-OFS-*` class, and write a descendant selector from that.
 
+### Astro: use `is:inline` on the script tag
+
+When embedding Hapana widgets in an Astro page, the script tag **must** have `is:inline`:
+
+```html
+<script is:inline src="https://widget.hapana.com/hapana_widget.js"></script>
+```
+
+Without it, Astro converts the tag into a module script. Module scripts are subject to CORS rules — the browser will block the load because Hapana's server doesn't include your domain in its allowed-origins headers. A regular script tag (which `is:inline` preserves) bypasses CORS entirely. This was confirmed as the cause of a blank white widget box on `test.ditto.club`.
+
 ---
 
 ## Brand Tokens
@@ -148,8 +158,9 @@ See `html-structure.md` for the full DOM tree of each widget.
 
 ## Open Items
 
-- [ ] Deploy updated Worker code (Referer-based test/prod branching)
-- [ ] Create `test` branch in this repo
-- [ ] Verify branching works on test.ditto.club; fall back to `?env=test` query param if Referer is unreliable
+- [x] Deploy updated Worker code (Referer-based test/prod branching) — live and confirmed working
+- [x] Create `test` branch in this repo
+- [x] Verify branching works on test.ditto.club — confirmed via spearmint border test
 - [ ] Fix Hapana booking widget mobile CSS — widget currently doesn't scale well on mobile. **Do not hide it** (old Squarespace site hid it on mobile and showed an app-download message instead — that was a workaround, not a solution). Needs proper responsive CSS.
-- [ ] Confirm whether fonts need to be self-hosted inside this repo or if the Squarespace CDN URLs remain usable during transition
+- [x] Fix widget fonts on test.ditto.club — removed all `@font-face` declarations and custom font-family names (`'INSTRUMENTSERIF'`, `'ACUMIN'`) from test branch. All rules now reference `'Instrument Serif'` and `'Acumin Variable Concept'` to match global.css. Widget is DOM-injected on the Astro site so page fonts are in the same cascade — no separate font loading needed. Go-live: merge test → main, same approach applies.
+- [x] ~~Confirm whether fonts need to be self-hosted inside this repo or if the Squarespace CDN URLs remain usable during transition~~ — resolved by removing @font-face entirely from test branch; using page fonts directly.

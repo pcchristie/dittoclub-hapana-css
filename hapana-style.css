@@ -4,22 +4,10 @@
    ========================================= */
 
 /* Font Face Declarations */
-@font-face {
-    font-family: 'ACUMIN';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c45eb0925205c1ca77/1759465928300/AcuminVariableConcept.otf');
-    font-weight: 100 900;
-    font-stretch: 75% 100%;
-}
-
-@font-face {
-    font-family: 'INSTRUMENTSERIF';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c9e222354b5b916bfc/1759465929940/InstrumentSerif-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'INSTRUMENTITALIC';
-    src: url('https://static1.squarespace.com/static/68df43cfbc72d37d4bef097b/t/68df51c95a36b704e0fa5d02/1759465929939/InstrumentSerif-Italic.ttf');
-}
+/* Note (test branch): widget is DOM-injected on the Astro site, so page fonts
+   ('Acumin Variable Concept', 'Instrument Serif') are already in the same cascade
+   via global.css. No separate @font-face declarations needed here for test.
+   Rules below reference those names directly so the browser uses the already-loaded fonts. */
 
 /* Main Widget Background - Off-White */
 .Mui-modalLayout-OFS-dialogContainer {
@@ -60,7 +48,7 @@
 .Mui-classesWidget-OFS-listHead .Mui-classesWidget-OFS-h4,
 .Mui-classesWidget-OFS-listHead h4 {
     text-transform: uppercase !important;
-    font-size: 20px !important; /* 18px + 2px */
+    font-size: 1.25rem !important; /* 18px + 2px */
     color: #333F48 !important;
 }
 
@@ -70,7 +58,7 @@
 .MuiTypography-body2,
 .MuiTypography-h1,
 .MuiTypography-h2 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
 }
 
 /* H3 and Paragraph - Acumin (Body Text) */
@@ -78,32 +66,39 @@
 .MuiTypography-body1,
 .MuiTypography-body2,
 p {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
 /* H4 - Specific styling for different areas */
 /* Class List Day Heading - Instrument Serif, 18px */
 .Mui-classesWidget-OFS-h4 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
-    font-size: 18px !important;
+    font-family: 'Instrument Serif', serif !important;
+    font-size: 1.125rem !important;
 }
 
 /* Class List Time (h4 in first child of classList2) - 18px (16px + 2px), unbold, Instrument Serif */
 .Mui-classesWidget-OFS-classList2 > div:first-child h4 {
-    font-size: 16px !important; /* 16px + 2px */
+    font-size: 1rem !important; /* 16px + 2px */
     font-weight: normal !important;
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
+}
+
+/* Book button cell - vertically centre the button within its grid cell (fixes mobile alignment) */
+.Mui-classesWidget-OFS-block5 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
 }
 
 /* "X SPOTS LEFT" - h4 in block4 (3rd child of class row), Cobalt and Acumin, unbold, 16px (18px - 2px) */
 .Mui-classesWidget-OFS-block4 h4,
 .Mui-classesWidget-OFS-classList2 h4.status {
-    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    font-family: 'Acumin Variable Concept', sans-serif !important; /* Acumin font */
     color: #171C8F !important; /* Cobalt color */
     font-stretch: 100% !important;
     font-weight: normal !important; /* Unbold */
-    font-size: 16px !important; /* 18px - 2px */
+    font-size: 1rem !important; /* 18px - 2px */
 }
 
 /* Completed/Closed status text - Asphalt color, Acumin font */
@@ -111,15 +106,15 @@ p {
 .Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 h4.error,
 .Mui-classesWidget-OFS-classList2 .Mui-classesWidget-OFS-block5 .Mui-classesWidget-OFS-h4.error {
     color: #333F48 !important; /* Asphalt */
-    font-family: 'ACUMIN', sans-serif !important; /* Acumin font */
+    font-family: 'Acumin Variable Concept', sans-serif !important; /* Acumin font */
     font-stretch: 100% !important;
-    font-size: 16px !important; /* 18px - 2px */
+    font-size: 1rem !important; /* 18px - 2px */
 }
 
 /* Generic H4 fallback - Instrument Serif, 18px */
 .MuiTypography-h4 {
-    font-family: 'INSTRUMENTSERIF', serif !important;
-    font-size: 18px !important;
+    font-family: 'Instrument Serif', serif !important;
+    font-size: 1.125rem !important;
 }
 
 /* Buttons - Cobalt Background */
@@ -136,6 +131,7 @@ p {
     color: #F9F8F2 !important;           /* Off-White text */
     border: 1px solid #171C8F !important; /* Cobalt border */
     border-radius: 0 !important;         /* Square corners */
+    padding: 8px 20px !important;        /* Consistent clearance regardless of label length */
 }
 
 /* Button Hover */
@@ -315,13 +311,41 @@ button[class*="Mui-button-OFS"] button {
     background-color: #dbefe9a6 !important; /* Light spearmint with transparency */
 }
 
+/* "Sign in" inline link on the Create Account screen — plain cobalt text, no button box */
+/* Scoped tightly to Mui-createAccountTitle-OFS-signIn to avoid affecting any other buttons */
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn,
+.Mui-createAccountTitle-OFS-signIn {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    color: #171C8F !important; /* Cobalt */
+    text-decoration: underline !important;
+    text-underline-offset: 2px !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+}
+
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn *,
+.Mui-createAccountTitle-OFS-signIn * {
+    color: #171C8F !important; /* Cobalt */
+}
+
+#button-titleSignIn.Mui-createAccountTitle-OFS-signIn:hover,
+.Mui-createAccountTitle-OFS-signIn:hover {
+    background-color: transparent !important;
+    opacity: 0.7 !important;
+}
+
 /* Login Modal Styling */
 /* Login and Sign Up titles - Acumin, uppercase, font-weight 750 */
 .Mui-loginModal-OFS-dialogContainer .Mui-loginModal-OFS-title,
 .Mui-loginModal-OFS-logIn .Mui-loginModal-OFS-title,
 .Mui-loginModal-OFS-signUp .Mui-loginModal-OFS-title,
 h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     text-transform: uppercase !important;
     font-weight: 750 !important;
     font-stretch: 100% !important;
@@ -332,7 +356,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-signUp .MuiButton-label,
 #button-loginModalLogin .MuiButton-label,
 #button-loginModalSignUp .MuiButton-label {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
@@ -342,7 +366,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-dialogActions .Mui-loginModal-OFS-link,
 #loginModalForgotPassword,
 #loginModalHelp {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-stretch: 100% !important;
 }
 
@@ -353,7 +377,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart,
 .MuiInputBase-inputAdornedEnd,
 .MuiOutlinedInput-inputAdornedEnd {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
@@ -364,13 +388,13 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .MuiOutlinedInput-inputAdornedStart::placeholder,
 .MuiInputBase-inputAdornedEnd::placeholder,
 .MuiOutlinedInput-inputAdornedEnd::placeholder {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Signup modal "Already have an account?" text */
 #signUpModalAlreadyHaveAccount,
 .Mui-signUpModal-OFS-link#signUpModalAlreadyHaveAccount {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Package terms modal subtitle overflow onto two lines to avoid going behind top left and right buttons */
@@ -384,7 +408,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Stepper "Review" link text */
 #linkStepper,
 .Mui-stepper-OFS-linkStepper#linkStepper {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     margin: auto; /* center the text vertically alongside the other steps (was floating before this) */
 }
 
@@ -396,7 +420,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Privacy policy modal body text to Acumin */
 .Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1,
 .Mui-classPrivacyPolicyModal-OFS-regularText.MuiTypography-body1 * {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 /* Privacy policy modal heading container (avoid jss*) */
@@ -411,13 +435,13 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.MuiInputBase-colorSecondary input.MuiInputBase-input,
 .Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root.MuiOutlinedInput-colorSecondary input.MuiOutlinedInput-input,
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root.Mui-formField-OFS-msReveal input.MuiInputBase-input {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
 .Mui-loginModal-OFS-dialogContainer .MuiInputBase-root input.MuiInputBase-input::placeholder,
 .Mui-loginModal-OFS-dialogContainer .MuiOutlinedInput-root input.MuiOutlinedInput-input::placeholder {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
 }
 
 #packages {
@@ -440,7 +464,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Package card titles */
 .Mui-packageCard-OFS-title {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     text-transform: uppercase !important;
     font-weight: 750 !important;
     color: #171C8F !important; /* Cobalt */
@@ -449,10 +473,10 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 
 /* Section heading above the list (e.g., "Packages", "Memberships") */
 .Mui-cardsList-OFS-title {
-    font-family: 'INSTRUMENTSERIF', serif !important;
+    font-family: 'Instrument Serif', serif !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
-    font-size: 28px !important;
+    font-size: 1.75rem !important;
     color: #333F48 !important; /* Asphalt */
     letter-spacing: 0.03em;
 }
@@ -461,21 +485,22 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 .Mui-packageCard-OFS-card p,
 .Mui-packageCard-OFS-card .MuiTypography-body1,
 .Mui-packageCard-OFS-card .MuiTypography-body2 {
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     color: #333F48 !important; /* Asphalt */
 }
 
 /* Package detail modal */
 .Mui-packageDetails-OFS-standAlonePackageDetails {
-    background-color: #F9F8F2 !important; /* Off-White */
-    border: 1px solid #171C8F !important;  /* Cobalt */
+    background-color: transparent !important;
+    border: none !important;
     border-radius: 0 !important;
+    box-shadow: none !important;
 }
 
 .Mui-packageDetailModal-OFS-titleContainer {
     color: #171C8F !important; /* Cobalt */
     text-transform: uppercase !important;
-    font-family: 'ACUMIN', sans-serif !important;
+    font-family: 'Acumin Variable Concept', sans-serif !important;
     font-weight: 750 !important;
     letter-spacing: 0.02em;
 }
@@ -518,7 +543,7 @@ h1.MuiTypography-root.Mui-loginModal-OFS-title.MuiTypography-body1 {
 /* Login button sizing (status bar) */
 .Mui-logged-OFS-button {
     padding: 8px 16px !important;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
     font-weight: 700 !important;
     min-height: 36px !important;
 }
